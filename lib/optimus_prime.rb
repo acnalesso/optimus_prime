@@ -14,7 +14,9 @@ module OptimusPrime
     else
       `thin start -p 7002 -P ./tmp/pids/optimus_prime.pid -d`
       while true
-        break if `ls ./tmp/pids`.include?("optimus_prime.pid")
+        if `ls ./tmp/pids`.include?("optimus_prime.pid")
+          sleep(2) and break
+        end
       end
     end
   end

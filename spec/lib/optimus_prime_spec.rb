@@ -1,5 +1,3 @@
-require "optimus_prime"
-
 describe OptimusPrime do
 
   let(:op) { OptimusPrime::Base.new }

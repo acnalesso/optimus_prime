@@ -6,6 +6,8 @@ module OptimusPrime
 
   class Server < ::Sinatra::Base
 
+    set :public_folder, __dir__ + "/server/public"
+
     get "/get" do
       response = primed[params["path_name"]]
       content_type response[:content_type] || "text"
@@ -13,7 +15,6 @@ module OptimusPrime
     end
 
     post "/prime" do
-      p params
       path = params["path_name"]
       primed[path] = { content_type: params["content_type"], body: params["response"] }
       200

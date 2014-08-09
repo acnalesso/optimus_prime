@@ -7,16 +7,18 @@ TODO: Write a gem description
 ## Installation
 
 Add this line to your application's Gemfile:
-
-    gem 'optimus_prime'
+```ruby
+gem 'optimus_prime'
+```
 
 And then execute:
-
-    $ bundle
-
+```bash
+$ bundle
+```
 Or install it yourself as:
-
-    $ gem install optimus_prime
+```bash
+$ gem install optimus_prime
+```
 
 OptimusPrime allows developers to persist fake date and tell their API to talk
 to it and get the desired response.
@@ -31,10 +33,11 @@ to it and get the desired response.
  * POST
 
 # Usage
-
-    OptimusPrime.start_server
-    op = OptimusPrime::Base.new
-    op.prime("path_name", response, options)
+```ruby
+OptimusPrime.start_server
+op = OptimusPrime::Base.new
+op.prime("path_name", response, options)
+```
 
 ## Changing Content Type:
 ```ruby

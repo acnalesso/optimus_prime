@@ -5,11 +5,11 @@ require 'optimus_prime/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "optimus_prime"
-  spec.version       = OptimusPrime::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["nbit001@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.version       = OptimusPrime::VERSION.dup
+  spec.authors       = ["Antonio Nalesso"]
+  spec.email         = ["acnalesso@yahoo.co.uk"]
+  spec.summary       = %q{ Create endpoints and persists data }
+  spec.description   = %q{ It allows developers to define endpoint, persist some data to be returned when called the endpoint defined.}
   spec.homepage      = ""
   spec.license       = "MIT"
 

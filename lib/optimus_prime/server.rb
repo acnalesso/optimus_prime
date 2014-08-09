@@ -26,7 +26,7 @@ module OptimusPrime
     post "/prime" do
       path = params["path_name"]
       primed[path] = { content_type: params["content_type"], body: params["response"], status_code: (params["status_code"] || 200) }
-      200
+      201
     end
 
     get "/show" do

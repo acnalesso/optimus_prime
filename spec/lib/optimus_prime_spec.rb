@@ -3,7 +3,7 @@ describe OptimusPrime do
   let(:op) { OptimusPrime::Base.new }
 
   it "primes an endpoint" do
-    expect( op.prime("test").status ).to eq 200
+    expect( op.prime("test").status ).to eq 201
   end
 
   it "primes an endpoint with attributes" do

@@ -8,8 +8,8 @@ module OptimusPrime
 
     set :public_folder, __dir__ + "/server/public"
 
-    get "/get" do
-      response = primed[params["path_name"]]
+    get "/get/*" do
+      response = primed[params["splat"].first]
       content_type response[:content_type] || "text"
       response[:body]
     end

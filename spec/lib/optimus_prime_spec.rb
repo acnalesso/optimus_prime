@@ -42,6 +42,27 @@ describe OptimusPrime do
     expect( JSON.parse(response.body) ).to eq({ "username" => "Test" })
   end
 
+  it "allows developers to change the response status code" do
+    op.prime("notFound", { username: "Test" }.to_json, content_type: :json, status_code: 404)
+    response = ::Faraday.get('http://localhost:7002/get/notFound')
+
+    expect( response.status ).to eq 404
+  end
+
+  it "returns 200 http status code as default" do
+    op.prime("notFound", { username: "Test" }.to_json, content_type: :json)
+    response = ::Faraday.get('http://localhost:7002/get/notFound')
+
+    expect( response.status ).to eq 200
+  end
+
+  it "handles POST requests" do
+    op.prime("user", { username: "Test" }.to_json, content_type: :json)
+    response = ::Faraday.post('http://localhost:7002/get/user')
+
+    expect( JSON.parse(response.body) ).to eq({ "username" => "Test" })
+  end
+
   context "Starting and Stopping the server" do
     it "starts the server" do
       OptimusPrime.restart_server

@@ -1,4 +1,6 @@
 # OptimusPrime
+####“It’s been an honor serving with you all.”
+
 
 TODO: Write a gem description
 
@@ -16,9 +18,38 @@ Or install it yourself as:
 
     $ gem install optimus_prime
 
-## Usage
+OptimusPrime allows developers to persist fake date and tell their API to talk
+to it and get the desired response.
 
-TODO: Write usage instructions here
+## Default configuration
+  * localhost:7002/get -> default endpoint
+  * returns 200 status code for GET,POST
+  * sets content-type to text
+
+## HTTP allowed requests
+ * GET
+ * POST
+
+# Usage
+
+    OptimusPrime.start_server
+    op = OptimusPrime::Base.new
+    op.prime("path_name", response, options)
+
+## Changing Content Type:
+    op.prime("users", { users json... }, { content_type: :json })
+    response = Faraday.get("http://localhost:7002/get/users")
+    response.headers["content-type"] #=> "application/json"
+
+## Changing HTTP response method:
+    op.prime("users", " response... ", { status_code: 404 })
+    response = Faraday.get("http://localhost:7002/get/users")
+    response.status #=> 404
+
+## POST requests:
+    op.prime("users", " response... ", status_code: 201)
+    response = Faraday.post("http://localhost:7002/get/users", { some data })
+    response.body #=> " response... "
 
 ## Contributing
 

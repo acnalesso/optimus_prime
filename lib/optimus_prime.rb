@@ -9,24 +9,18 @@ module OptimusPrime
   end
 
   def self.start_server
-    if `ls ./tmp/pids`.include?("optimus_prime.pid")
-      return `echo 'Optimus is already priming :)'`
-    else
-      `thin start -p 7002 -P ./tmp/pids/optimus_prime.pid -d`
-      while true
-        if `ls ./tmp/pids`.include?("optimus_prime.pid")
-          sleep(2) and break
-        end
-      end
+    return `echo 'Optimus is already priming :)'` if `ls ./tmp/pids`.include?("optimus_prime.pid")
+    `thin start -p 7002 -P ./tmp/pids/optimus_prime.pid -d`
+    while :starting_server
+      sleep(2) and break if `ls ./tmp/pids`.include?("optimus_prime.pid")
     end
   end
 
   def self.stop_server
-    cmd = `thin stop -P ./tmp/pids/optimus_prime.pid`
-    while true
+    `thin stop -P ./tmp/pids/optimus_prime.pid`
+    while :stopping_server
       break unless `ls ./tmp/pids`.include?("optimus_prime.pid")
     end
-    cmd
   end
 
   class Base

@@ -9,18 +9,27 @@ module OptimusPrime
   end
 
   def self.start_server
+    `mkdir -p ./tmp/pids` unless system("ls ./tmp/pids/")
     return `echo 'Optimus is already priming :)'` if `ls ./tmp/pids`.include?("optimus_prime.pid")
-    `thin start -p 7002 -P ./tmp/pids/optimus_prime.pid -d`
-    while :starting_server
-      sleep(2) and break if `ls ./tmp/pids`.include?("optimus_prime.pid")
+    if system("cd #{optimus_prime_path} && echo '\nStarting Optimus Prime\n' && thin start -p 7002 -P #{current_path}/tmp/pids/optimus_prime.pid -l #{current_path}/optimus_prime.log -d -D")
+      while :starting_server
+        sleep(2) and break if `ls ./tmp/pids`.include?("optimus_prime.pid")
+      end
     end
   end
 
+  def self.optimus_prime_path
+    File.expand_path('../', __dir__)
+  end
+
+  def self.current_path; `pwd`.chomp; end
+
   def self.stop_server
-    `thin stop -P ./tmp/pids/optimus_prime.pid`
-    while :stopping_server
-      break unless `ls ./tmp/pids`.include?("optimus_prime.pid")
-    end
+    system("cd #{optimus_prime_path} && echo '\nStoping Optimus Prime\n' && thin stop -P #{current_path}/tmp/pids/optimus_prime.pid")
+  end
+
+  def self.full_path
+    File.expand_path(__dir__)
   end
 
   class Base

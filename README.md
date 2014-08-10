@@ -7,16 +7,18 @@ TODO: Write a gem description
 ## Installation
 
 Add this line to your application's Gemfile:
-
-    gem 'optimus_prime'
+```ruby
+gem 'optimus_prime'
+```
 
 And then execute:
-
-    $ bundle
-
+```bash
+$ bundle
+```
 Or install it yourself as:
-
-    $ gem install optimus_prime
+```bash
+$ gem install optimus_prime
+```
 
 OptimusPrime allows developers to persist fake date and tell their API to talk
 to it and get the desired response.
@@ -31,25 +33,32 @@ to it and get the desired response.
  * POST
 
 # Usage
-
-    OptimusPrime.start_server
-    op = OptimusPrime::Base.new
-    op.prime("path_name", response, options)
+```ruby
+OptimusPrime.start_server
+op = OptimusPrime::Base.new
+op.prime("path_name", response, options)
+```
 
 ## Changing Content Type:
-    op.prime("users", { users json... }, { content_type: :json })
-    response = Faraday.get("http://localhost:7002/get/users")
-    response.headers["content-type"] #=> "application/json"
+```ruby
+op.prime("users", { users json... }, { content_type: :json })
+response = Faraday.get("http://localhost:7002/get/users")
+response.headers["content-type"] #=> "application/json"
+```
 
 ## Changing HTTP response method:
-    op.prime("users", " response... ", { status_code: 404 })
-    response = Faraday.get("http://localhost:7002/get/users")
-    response.status #=> 404
+```ruby
+op.prime("users", " response... ", { status_code: 404 })
+response = Faraday.get("http://localhost:7002/get/users")
+response.status #=> 404
+```
 
 ## POST requests:
-    op.prime("users", " response... ", status_code: 201)
-    response = Faraday.post("http://localhost:7002/get/users", { some data })
-    response.body #=> " response... "
+```ruby
+op.prime("users", " response... ", status_code: 201)
+response = Faraday.post("http://localhost:7002/get/users", { some data })
+response.body #=> " response... "
+```
 
 ## Contributing
 

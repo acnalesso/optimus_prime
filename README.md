@@ -63,6 +63,7 @@ response.body #=> " response... "
 from its directory.
   * Support DELETE, HEAD, PUT http methods
   * Support REGEX as a path
+  * Support html templates
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/optimus_prime/fork )

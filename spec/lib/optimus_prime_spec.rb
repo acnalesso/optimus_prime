@@ -50,8 +50,8 @@ describe OptimusPrime do
   end
 
   it "returns 200 http status code as default" do
-    op.prime("notFound", { username: "Test" }.to_json, content_type: :json)
-    response = ::Faraday.get('http://localhost:7002/get/notFound')
+    op.prime("continue", { username: "Test" }.to_json, content_type: :json)
+    response = ::Faraday.get('http://localhost:7002/get/continue')
 
     expect( response.status ).to eq 200
   end

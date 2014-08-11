@@ -2,8 +2,6 @@
 ####“It’s been an honor serving with you all.”
 
 
-TODO: Write a gem description
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -60,6 +58,11 @@ response = Faraday.post("http://localhost:7002/get/users", { some data })
 response.body #=> " response... "
 ```
 
+## TODO
+  * Move server initialisation into rake task in order to prevent it from initialising
+from its directory.
+  * Support DELETE, HEAD, PUT http methods
+  * Support REGEX as a path
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/optimus_prime/fork )

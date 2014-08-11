@@ -34,3 +34,18 @@ Thin web server (v1.6.2 codename Doc Brown)
 Debugging ON
 Maximum connections set to 1024
 Listening on 0.0.0.0:7002, CTRL+C to stop
+"user"
+Exiting!
+Writing PID to /Users/acnalesso/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Exiting!
+Writing PID to /Users/acnalesso/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop

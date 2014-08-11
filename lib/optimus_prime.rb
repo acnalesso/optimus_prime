@@ -9,8 +9,8 @@ module OptimusPrime
   end
 
   def self.start_server
-    `mkdir -p ./tmp/pids` unless system("ls ./tmp/pids/")
-    return `echo 'Optimus is already priming :)'` if `ls ./tmp/pids`.include?("optimus_prime.pid")
+    `mkdir -p ./tmp/pids`
+    return `echo 'Optimus is already priming :)'` if system("ls ./tmp/pids/optimus_prime.pid")
     path = `pwd`.chomp
     if system("cd #{optimus_prime_path} && echo '\nStarting Optimus Prime\n' && thin start -p 7002 -P #{path}/tmp/pids/optimus_prime.pid -l #{path}/optimus_prime.log -d -D")
       while :starting_server

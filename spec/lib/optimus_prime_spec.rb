@@ -42,6 +42,12 @@ describe OptimusPrime do
     expect( JSON.parse(response.body) ).to eq({ "username" => "Test" })
   end
 
+  it "returns a 404 when endpoint is not found" do
+    response = ::Faraday.get('http://localhost:7002/get/iDoNotExist')
+
+    expect( response.status ).to eq 404
+  end
+
   it "allows developers to change the response status code" do
     op.prime("notFound", { username: "Test" }.to_json, content_type: :json, status_code: 404)
     response = ::Faraday.get('http://localhost:7002/get/notFound')

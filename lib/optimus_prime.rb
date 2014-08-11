@@ -11,7 +11,8 @@ module OptimusPrime
   def self.start_server
     `mkdir -p ./tmp/pids` unless system("ls ./tmp/pids/")
     return `echo 'Optimus is already priming :)'` if `ls ./tmp/pids`.include?("optimus_prime.pid")
-    if system("cd #{optimus_prime_path} && echo '\nStarting Optimus Prime\n' && thin start -p 7002 -P #{current_path}/tmp/pids/optimus_prime.pid -l #{current_path}/optimus_prime.log -d -D")
+    path = `pwd`.chomp
+    if system("cd #{optimus_prime_path} && echo '\nStarting Optimus Prime\n' && thin start -p 7002 -P #{path}/tmp/pids/optimus_prime.pid -l #{path}/optimus_prime.log -d -D")
       while :starting_server
         sleep(2) and break if `ls ./tmp/pids`.include?("optimus_prime.pid")
       end
@@ -25,7 +26,8 @@ module OptimusPrime
   def self.current_path; `pwd`.chomp; end
 
   def self.stop_server
-    system("cd #{optimus_prime_path} && echo '\nStoping Optimus Prime\n' && thin stop -P #{current_path}/tmp/pids/optimus_prime.pid")
+    path = `pwd`.chomp
+    system("cd #{optimus_prime_path} && echo '\nStoping Optimus Prime\n' && thin stop -P #{path}/tmp/pids/optimus_prime.pid")
   end
 
   def self.full_path

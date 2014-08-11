@@ -701,3 +701,5 @@ Thin web server (v1.6.2 codename Doc Brown)
 Debugging ON
 Maximum connections set to 1024
 Listening on 0.0.0.0:7002, CTRL+C to stop
+Waiting for 1 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+Exiting!

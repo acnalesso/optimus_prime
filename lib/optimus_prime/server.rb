@@ -17,7 +17,7 @@ module OptimusPrime
     get "/get/*" do
       path = self.env["REQUEST_URI"].sub("/get/", "")
       response = responses[path]
-      content_type(response[:content_type] || "text")
+      content_type(response[:content_type] || :html)
       status(response[:status_code])
       response[:body]
     end

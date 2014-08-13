@@ -40,5 +40,9 @@ module OptimusPrime
       ::Faraday.post("http://localhost:7002/prime", { path_name: path_name, response: response }.merge!(options))
     end
 
+    def clear!
+      ::Faraday.get("http://localhost:7002/clear")
+    end
+
   end
 end

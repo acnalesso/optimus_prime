@@ -12,20 +12,27 @@ module OptimusPrime
       path = self.env["REQUEST_URI"].sub("/get/", "")
       response = responses[path]
       return 404 if response.nil?
-      sleep(response[:sleep].to_f) if response[:sleep]
 
-      if response[:include]
-        return 404 unless eval("request.body.string.include?('#{response[:include]}')")
+      if response[:requested_with]
+        return 404 unless eval("request.body.string.include?('#{response[:requested_with]}')")
       end
 
       content_type(response[:content_type])
       status(response[:status_code])
+
+      sleep(response[:sleep].to_i) if response[:sleep]
+
       response[:body]
     end
 
-    get "/get/*" do
+    def get_response
       path = self.env["REQUEST_URI"].sub("/get/", "")
-      response = responses[path]
+      responses[path]
+    end
+
+    get "/get/*" do
+      #path = self.env["REQUEST_URI"].sub("/get/", "")
+      response = get_response
       return 404 if response.nil?
       sleep(response[:sleep].to_f) if response[:sleep]
 
@@ -36,13 +43,17 @@ module OptimusPrime
 
     post "/prime" do
       path = params["path_name"]
-      responses[path] = { content_type: (params["content_type"] || :html), body: params["response"], status_code: (params["status_code"] || 200), include: (params["include"] || false), sleep: (params["sleep"] || false) }
+      responses[path] = { content_type: (params["content_type"] || :html), body: params["response"], status_code: (params["status_code"] || 200), requested_with: (params["requested_with"] || false), sleep: (params["sleep"] || false) }
       201
     end
 
     get "/show" do
       content_type :json
       responses.to_json
+    end
+
+    get "/clear" do
+      @@responses = {}
     end
 
     private

@@ -67,7 +67,7 @@ response.status #=> 404
 
 ## Assert on a POST request body
 ```ruby
-op.prime("users", " response... ", include: "I am a body")
+op.prime("users", " response... ", requested_with: "a body")
 response = Faraday.post("http://localhost:7002/get/users", "I am a body")
 response.status #=> 200
 ```

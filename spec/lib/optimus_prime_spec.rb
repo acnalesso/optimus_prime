@@ -69,30 +69,10 @@ describe OptimusPrime do
     expect( JSON.parse(response.body) ).to eq({ "username" => "Test" })
   end
 
-  context "Starting and Stopping the server" do
-    it "starts the server" do
-      OptimusPrime.restart_server
-      expect( `ls ./tmp/pids` ).to include("optimus_prime.pid")
-    end
-
-    it "stops the server" do
-      OptimusPrime.start_server
-      OptimusPrime.stop_server
-      expect( `ls ./tmp/pids` ).to_not include("optimus_prime.pid")
-      OptimusPrime.start_server
-    end
-
-    it "informs me if the server is already running" do
-      OptimusPrime.start_server
-      expect( OptimusPrime.start_server ).to include("Optimus is already priming :)")
-    end
-
-  end
-
   context "Asserting on request content" do
 
     it "returns a 404 if the request body does not match the assertion" do
-      op.prime("user", { username: "Test" }.to_json, content_type: :json, include: "haha")
+      op.prime("user", { username: "Test" }.to_json, content_type: :json, requested_with: "haha")
 
       response = ::Faraday.post('http://localhost:7002/get/user', "I am a body")
 
@@ -100,7 +80,7 @@ describe OptimusPrime do
     end
 
     it "returns a 200 if the request body does match the assertion" do
-      op.prime("user", { username: "Test" }.to_json, content_type: :json, include: "I am a body")
+      op.prime("user", { username: "Test" }.to_json, content_type: :json, requested_with: "I am a body")
 
       response = ::Faraday.post('http://localhost:7002/get/user', "I am a body")
 
@@ -110,24 +90,29 @@ describe OptimusPrime do
   end
 
   context "Server processing" do
-    it "#GET tells the server to sleep for n seconds in order to reproduce timeouts" do
-      op.prime("user", { username: "Test" }.to_json, content_type: :json, sleep: 10)
 
+    it "#GET tells the server to sleep for 10 seconds in order to reproduce timeouts" do
+      op.prime("userAsleep", { username: "Test" }.to_json, content_type: :json, sleep: 10)
 
-     expect do
-       ::Faraday.get('http://localhost:7002/get/user') { |r| r.options.timeout = 0.2 }
-     end.to raise_error
+      f = ::Faraday.new('http://localhost:7002/get/')
+      f.options.timeout = 0
 
+      expect { f.get("/userAsleep") }.to raise_error(Faraday::TimeoutError)
+
+      op.clear!
     end
 
     it "#POST tells the server to sleep for n seconds in order to reproduce timeouts" do
-      op.prime("user", { username: "Test" }.to_json, content_type: :json, sleep: 10)
+      op.prime("userAsleepAgain", { username: "Test" }.to_json, content_type: :json, sleep: 10)
 
-     expect do
-       ::Faraday.post('http://localhost:7002/get/user', "I am a body") { |r| r.options.timeout = 0.2 }
-     end.to raise_error
+      f = ::Faraday.new('http://localhost:7002/get/')
+      f.options.timeout = 0
 
+      expect { f.get("/userAsleepAgain") }.to raise_error(Faraday::TimeoutError)
+
+      op.clear!
     end
+
   end
 
 end

@@ -37,6 +37,20 @@ op = OptimusPrime::Base.new
 op.prime("path_name", response, options)
 ```
 
+## GET requests:
+```ruby
+op.prime("users", " response... ", status_code: 200)
+response = Faraday.get("http://localhost:7002/get/users")
+response.body #=> " response... "
+```
+
+## POST requests:
+```ruby
+op.prime("users", " response... ", status_code: 201)
+response = Faraday.post("http://localhost:7002/get/users", { some data })
+response.status #=> 201 - Created
+```
+
 ## Changing Content Type:
 ```ruby
 op.prime("users", { users json... }, { content_type: :json })
@@ -51,12 +65,21 @@ response = Faraday.get("http://localhost:7002/get/users")
 response.status #=> 404
 ```
 
-## POST requests:
+## Assert on a POST request body
 ```ruby
-op.prime("users", " response... ", status_code: 201)
-response = Faraday.post("http://localhost:7002/get/users", { some data })
-response.body #=> " response... "
+op.prime("users", " response... ", include: "I am a body")
+response = Faraday.post("http://localhost:7002/get/users", "I am a body")
+response.status #=> 200
 ```
+
+## Simulating server processing or timeouts
+```ruby
+op.prime("users", " response... ", sleep: 10)
+response = Faraday.get("http://localhost:7002/get/users")
+# .... 10 seconds later ...
+response.status #=> 200
+```
+
 
 ## TODO
   * Move server initialisation into rake task in order to prevent it from initialising

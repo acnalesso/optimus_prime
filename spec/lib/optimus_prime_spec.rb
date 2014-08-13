@@ -92,7 +92,7 @@ describe OptimusPrime do
   context "Asserting on request content" do
 
     it "returns a 404 if the request body does not match the assertion" do
-      op.prime("user", { username: "Test" }.to_json, content_type: :json, constraint: "request.body.string.include?('ahahah')")
+      op.prime("user", { username: "Test" }.to_json, content_type: :json, include: "haha")
 
       response = ::Faraday.post('http://localhost:7002/get/user', "I am a body")
 
@@ -100,13 +100,34 @@ describe OptimusPrime do
     end
 
     it "returns a 200 if the request body does match the assertion" do
-      op.prime("user", { username: "Test" }.to_json, content_type: :json, constraint: "request.body.string.include?('I am a body')")
+      op.prime("user", { username: "Test" }.to_json, content_type: :json, include: "I am a body")
 
       response = ::Faraday.post('http://localhost:7002/get/user', "I am a body")
 
       expect( response.status ).to eq 200
     end
 
+  end
+
+  context "Server processing" do
+    it "#GET tells the server to sleep for n seconds in order to reproduce timeouts" do
+      op.prime("user", { username: "Test" }.to_json, content_type: :json, sleep: 10)
+
+
+     expect do
+       ::Faraday.get('http://localhost:7002/get/user') { |r| r.options.timeout = 0.2 }
+     end.to raise_error
+
+    end
+
+    it "#POST tells the server to sleep for n seconds in order to reproduce timeouts" do
+      op.prime("user", { username: "Test" }.to_json, content_type: :json, sleep: 10)
+
+     expect do
+       ::Faraday.post('http://localhost:7002/get/user', "I am a body") { |r| r.options.timeout = 0.2 }
+     end.to raise_error
+
+    end
   end
 
 end

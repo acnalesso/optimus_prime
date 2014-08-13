@@ -89,4 +89,24 @@ describe OptimusPrime do
 
   end
 
+  context "Asserting on request content" do
+
+    it "returns a 404 if the request body does not match the assertion" do
+      op.prime("user", { username: "Test" }.to_json, content_type: :json, constraint: "request.body.string.include?('ahahah')")
+
+      response = ::Faraday.post('http://localhost:7002/get/user', "I am a body")
+
+      expect( response.status ).to eq 404
+    end
+
+    it "returns a 200 if the request body does match the assertion" do
+      op.prime("user", { username: "Test" }.to_json, content_type: :json, constraint: "request.body.string.include?('I am a body')")
+
+      response = ::Faraday.post('http://localhost:7002/get/user', "I am a body")
+
+      expect( response.status ).to eq 200
+    end
+
+  end
+
 end

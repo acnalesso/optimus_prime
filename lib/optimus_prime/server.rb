@@ -11,6 +11,12 @@ module OptimusPrime
     post "/get/*" do
       path = self.env["REQUEST_URI"].sub("/get/", "")
       response = responses[path]
+
+      if response[:constraint]
+        constraint = eval(response[:constraint])
+        return 404 unless constraint
+      end
+
       return 404 if response.nil?
       content_type(response[:content_type])
       status(response[:status_code])
@@ -28,7 +34,7 @@ module OptimusPrime
 
     post "/prime" do
       path = params["path_name"]
-      responses[path] = { content_type: (params["content_type"] || :html), body: params["response"], status_code: (params["status_code"] || 200) }
+      responses[path] = { content_type: (params["content_type"] || :html), body: params["response"], status_code: (params["status_code"] || 200), constraint: (params["constraint"] || false) }
       201
     end
 

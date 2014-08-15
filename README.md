@@ -44,11 +44,21 @@ response = Faraday.get("http://localhost:7002/get/users")
 response.body #=> " response... "
 ```
 
-## POST requests:
+## POST requests - creating data:
 ```ruby
-op.prime("users", " response... ", status_code: 201)
-response = Faraday.post("http://localhost:7002/get/users", { some data })
+op.prime("users/1", {}, status_code: 201)
+response = Faraday.post("http://localhost:7002/get/users/1", { created: true }.to_json)
 response.status #=> 201 - Created
+response.body #=> { created: true }
+```
+
+## PUT requests - editing data:
+```ruby
+op.prime("users/1", { age: 21 }, status_code: 201)
+response = Faraday.post("http://localhost:7002/get/users/1", { updated_at: "2013" }.to_json)
+response.status #=> 201 - Created
+
+Faraday.get("http://localhost:7002/get/users/1").body #=> { age: 21, updated_at: true }
 ```
 
 ## Changing Content Type:

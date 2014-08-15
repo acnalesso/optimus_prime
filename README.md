@@ -54,7 +54,7 @@ response.body #=> { created: true }
 
 ## PUT requests - editing data:
 ```ruby
-op.prime("users/1", { age: 21 }, status_code: 201)
+op.prime("users/1", { age: 21 }, status_code: 201, persited: true)
 response = Faraday.post("http://localhost:7002/get/users/1", { updated_at: "2013" }.to_json)
 response.status #=> 201 - Created
 
@@ -97,6 +97,8 @@ from its directory.
   * Support DELETE, HEAD, PUT http methods
   * Support REGEX as a path
   * Support html templates
+
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/optimus_prime/fork )

@@ -118,13 +118,13 @@ describe OptimusPrime do
 
   context "#PUT" do
     it "persists a request when told so" do
-      op.prime("persisted", { text: "" }.to_json, persisted: true)
+      op.prime("persisted", { text: "" }.to_json, persisted: true, content_type: :json)
 
       expect( JSON.parse(::Faraday.get("http://localhost:7002/get/persisted").body) ).to eq({ "text" => "" })
 
-      ::Faraday.put("http://localhost:7002/get/persisted", { text: "I have been persisted" })
+      ::Faraday.put("http://localhost:7002/get/persisted", { id: 1 })
 
-      expect( JSON.parse(::Faraday.get("http://localhost:7002/get/persisted").body, symbolize_names: true) ).to eq({ text: "I have been persisted" })
+      expect( JSON.parse(::Faraday.get("http://localhost:7002/get/persisted").body, symbolize_names: true) ).to eq({ text: "", id: "1"})
     end
 
   end

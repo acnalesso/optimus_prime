@@ -21,7 +21,8 @@ module OptimusPrime
 
       if response[:persisted]
         new_body = params.tap { |p| p.delete("splat"); p.delete("captures") }
-        @@responses[path][:body] = new_body.to_json
+
+        @@responses[path][:body] = JSON.parse(response[:body]).merge!(new_body).to_json
       end
       201
     end

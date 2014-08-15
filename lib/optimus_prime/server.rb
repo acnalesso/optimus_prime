@@ -8,6 +8,24 @@ module OptimusPrime
 
     set :public_folder, __dir__ + "/server/public"
 
+    put "/get/*" do
+      path = self.env["REQUEST_URI"].sub("/get/", "")
+      response = responses[path]
+      return 404 if response.nil?
+
+      if response[:requested_with]
+        return 404 unless eval("request.body.string.include?('#{response[:requested_with]}')")
+      end
+
+      sleep(response[:sleep].to_i) if response[:sleep]
+
+      if response[:persisted]
+        new_body = params.tap { |p| p.delete("splat"); p.delete("captures") }
+        @@responses[path][:body] = new_body.to_json
+      end
+      201
+    end
+
     post "/get/*" do
       path = self.env["REQUEST_URI"].sub("/get/", "")
       response = responses[path]
@@ -16,6 +34,10 @@ module OptimusPrime
       if response[:requested_with]
         return 404 unless eval("request.body.string.include?('#{response[:requested_with]}')")
       end
+
+
+      new_body = params.tap { |p| p.delete("splat"); p.delete("captures") }
+      @@responses[path][:body] = new_body.to_json
 
       content_type(response[:content_type])
       status(response[:status_code])
@@ -43,7 +65,7 @@ module OptimusPrime
 
     post "/prime" do
       path = params["path_name"]
-      responses[path] = { content_type: (params["content_type"] || :html), body: params["response"], status_code: (params["status_code"] || 200), requested_with: (params["requested_with"] || false), sleep: (params["sleep"] || false) }
+      responses[path] = { content_type: (params["content_type"] || :html), body: params["response"], status_code: (params["status_code"] || 200), requested_with: (params["requested_with"] || false), sleep: (params["sleep"] || false), persisted: (params["persisted"] || false) }
       201
     end
 

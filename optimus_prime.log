@@ -1551,3 +1551,357 @@ Thin web server (v1.6.2 codename Doc Brown)
 Debugging ON
 Maximum connections set to 1024
 Listening on 0.0.0.0:7002, CTRL+C to stop
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+{"text"=>"I have been persisted", "splat"=>["persisted"], "captures"=>["persisted"]}
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+{"text"=>"I have been persisted", "splat"=>["persisted"], "captures"=>["persisted"]}
+text=I+have+been+persisted
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Waiting for 1 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+{"text"=>"I have been persisted"}
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Waiting for 1 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Waiting for 1 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Waiting for 1 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+{:content_type=>:html, :body=>"{\"text\":\"\"}", :status_code=>200, :requested_with=>false, :sleep=>false, :persisted=>"true"}
+{"persisted"=>{:content_type=>:html, :body=>"{\"text\":\"\"}", :status_code=>200, :requested_with=>false, :sleep=>false, :persisted=>"true"}}
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Waiting for 1 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+{"age"=>"21", "text"=>"I have been created", "splat"=>["posts/1"], "captures"=>["posts/1"]}
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+{"age"=>"21", "category"=>"user", "text"=>"I have been created", "splat"=>["posts/1"], "captures"=>["posts/1"]}
+Waiting for 2 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Waiting for 1 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+{:content_type=>"json", :body=>{"age"=>"21", "category"=>"user", "text"=>"I have been created"}, :status_code=>200, :requested_with=>false, :sleep=>false, :persisted=>false}
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+{"age"=>"21", "category"=>"user", "text"=>"I have been created"}
+{:content_type=>"json", :body=>{"age"=>"21", "category"=>"user", "text"=>"I have been created"}, :status_code=>200, :requested_with=>false, :sleep=>false, :persisted=>false}
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+LoadError - cannot load such file -- pry:
+	/Users/user/optimus_prime/lib/optimus_prime/server.rb:38:in `require'
+	/Users/user/optimus_prime/lib/optimus_prime/server.rb:38:in `block in <class:Server>'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1603:in `call'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1603:in `block in compile!'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:966:in `[]'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:966:in `block (3 levels) in route!'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:985:in `route_eval'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:966:in `block (2 levels) in route!'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1006:in `block in process_route'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1004:in `catch'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1004:in `process_route'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:964:in `block in route!'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:963:in `each'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:963:in `route!'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1076:in `block in dispatch!'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `block in invoke'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `catch'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `invoke'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1073:in `dispatch!'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:898:in `block in call!'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `block in invoke'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `catch'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `invoke'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:898:in `call!'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:886:in `call'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/nulllogger.rb:9:in `call'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/show_exceptions.rb:21:in `call'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:180:in `call'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:2014:in `call'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1478:in `block in call'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1788:in `synchronize'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1478:in `call'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:86:in `block in pre_process'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:84:in `catch'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:84:in `pre_process'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:53:in `process'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:39:in `receive_data'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/controllers/controller.rb:87:in `start'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/runner.rb:199:in `run_command'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/runner.rb:155:in `run!'
+	/Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/bin/thin:6:in `<top (required)>'
+	/Users/user/.rvm/gems/ruby-2.1.1/bin/thin:23:in `load'
+	/Users/user/.rvm/gems/ruby-2.1.1/bin/thin:23:in `<main>'
+	/Users/user/.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `eval'
+	/Users/user/.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `<main>'
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+
+[1mFrom:[0m /Users/user/optimus_prime/lib/optimus_prime/server.rb @ line 39 self.POST /get/*:
+
+    34:       [32mif[0m response[[33m:requested_with[0m]
+    35:         [32mreturn[0m [1;34m404[0m [32munless[0m eval([31m[1;31m"[0m[31mrequest.body.string.include?('#{response[:requested_with]}[0m[31m')[1;31m"[0m[31m[0m)
+    36:       [32mend[0m
+    37: 
+    38:       require [31m[1;31m"[0m[31mpry[1;31m"[0m[31m[0m
+ => 39:       binding.pry
+    40: 
+    41:       new_body = params.tap { |p| p.delete([31m[1;31m"[0m[31msplat[1;31m"[0m[31m[0m); p.delete([31m[1;31m"[0m[31mcaptures[1;31m"[0m[31m[0m) }
+    42:       [36m@@responses[0m[path][[33m:body[0m] = new_body
+    43: 
+    44:       content_type(response[[33m:content_type[0m])
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Exiting!
+/Users/user/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:526:in `start_tcp_server': no acceptor (port is in use or requires root privileges) (RuntimeError)
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:526:in `start_server'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/backends/tcp_server.rb:16:in `connect'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/backends/base.rb:63:in `block in start'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `call'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/controllers/controller.rb:87:in `start'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/runner.rb:199:in `run_command'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/runner.rb:155:in `run!'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/bin/thin:6:in `<top (required)>'
+	from /Users/user/.rvm/gems/ruby-2.1.1/bin/thin:23:in `load'
+	from /Users/user/.rvm/gems/ruby-2.1.1/bin/thin:23:in `<main>'
+	from /Users/user/.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `eval'
+	from /Users/user/.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `<main>'
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Exiting!
+/Users/user/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:526:in `start_tcp_server': no acceptor (port is in use or requires root privileges) (RuntimeError)
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:526:in `start_server'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/backends/tcp_server.rb:16:in `connect'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/backends/base.rb:63:in `block in start'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `call'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/controllers/controller.rb:87:in `start'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/runner.rb:199:in `run_command'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/runner.rb:155:in `run!'
+	from /Users/user/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/bin/thin:6:in `<top (required)>'
+	from /Users/user/.rvm/gems/ruby-2.1.1/bin/thin:23:in `load'
+	from /Users/user/.rvm/gems/ruby-2.1.1/bin/thin:23:in `<main>'
+	from /Users/user/.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `eval'
+	from /Users/user/.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `<main>'
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop
+Exiting!
+Writing PID to /Users/user/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7002, CTRL+C to stop

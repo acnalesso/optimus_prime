@@ -62,13 +62,6 @@ describe OptimusPrime do
     expect( response.status ).to eq 200
   end
 
-  it "handles POST requests" do
-    op.prime("user", { username: "Test" }.to_json, content_type: :json)
-    response = ::Faraday.post('http://localhost:7002/get/user')
-
-    expect( JSON.parse(response.body) ).to eq({ "username" => "Test" })
-  end
-
   context "Asserting on request content" do
 
     it "returns a 404 if the request body does not match the assertion" do
@@ -111,6 +104,27 @@ describe OptimusPrime do
       expect { f.get("/userAsleepAgain") }.to raise_error(Faraday::TimeoutError)
 
       op.clear!
+    end
+
+  end
+
+  it "creates a record for with default params" do
+    op.prime("posts/1", {}, content_type: :json)
+
+    ::Faraday.post("http://localhost:7002/get/posts/1", { text: "I have been created", age: 21, category: "user" })
+
+    expect( JSON.parse(::Faraday.get("http://localhost:7002/get/posts/1").body, symbolize_names: true) ).to eq({:age=>"21", :category=>"user", :text=>"I have been created"})
+  end
+
+  context "#PUT" do
+    it "persists a request when told so" do
+      op.prime("persisted", { text: "" }.to_json, persisted: true)
+
+      expect( JSON.parse(::Faraday.get("http://localhost:7002/get/persisted").body) ).to eq({ "text" => "" })
+
+      ::Faraday.put("http://localhost:7002/get/persisted", { text: "I have been persisted" })
+
+      expect( JSON.parse(::Faraday.get("http://localhost:7002/get/persisted").body, symbolize_names: true) ).to eq({ text: "I have been persisted" })
     end
 
   end

@@ -62,6 +62,7 @@ describe OptimusPrime do
     expect( response.status ).to eq 200
   end
 
+
   context "Asserting on request content" do
 
     it "returns a 404 if the request body does not match the assertion" do
@@ -108,7 +109,7 @@ describe OptimusPrime do
 
   end
 
-  it "creates a record for with default params" do
+  it "#POST creates a record for with default params" do
     op.prime("posts/1", {}, content_type: :json)
 
     ::Faraday.post("http://localhost:7002/get/posts/1", { text: "I have been created", age: 21, category: "user" })

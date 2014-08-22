@@ -3,16 +3,21 @@ require "optimus_prime/server"
 
 module OptimusPrime
 
+  @@op_port = 7002
+  def self.op_port; @@op_port; end
+
   def self.restart_server
     self.stop_server
     self.start_server
   end
 
-  def self.start_server
+  def self.start_server(options={})
+    @@op_port = ENV["OP.ENV"] == "test" ? 7003 : options[:port]
+
     `mkdir -p ./tmp/pids`
     return `echo 'Optimus is already priming :)'` if system("ls ./tmp/pids/optimus_prime.pid")
     path = `pwd`.chomp
-    if system("cd #{optimus_prime_path} && echo '\nStarting Optimus Prime\n' && thin start -p 7002 -P #{path}/tmp/pids/optimus_prime.pid -l #{path}/optimus_prime.log -d -D")
+    if system("cd #{optimus_prime_path} && echo '\nStarting Optimus Prime\n' && thin start -p #{op_port} -P #{path}/tmp/pids/optimus_prime.pid -l #{path}/optimus_prime.log -d -D")
       while :starting_server
         sleep(2) and break if `ls ./tmp/pids`.include?("optimus_prime.pid")
       end
@@ -37,11 +42,11 @@ module OptimusPrime
   class Base
 
     def prime(path_name, response="", options={})
-      ::Faraday.post("http://localhost:7002/prime", { path_name: path_name, response: response }.merge!(options))
+      ::Faraday.post("http://localhost:#{OptimusPrime.op_port}/prime", { path_name: path_name, response: response }.merge!(options))
     end
 
     def clear!
-      ::Faraday.get("http://localhost:7002/clear")
+      ::Faraday.get("http://localhost:#{OptimusPrime.op_port}/clear")
     end
 
   end

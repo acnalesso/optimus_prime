@@ -9,8 +9,9 @@ module OptimusPrime
     set :public_folder, __dir__ + "/server/public"
 
     put "/get/*" do
-      path = self.env["REQUEST_URI"].sub("/get/", "")
+      path = get_response
       response = responses[path]
+
       return 404 if response.nil?
 
       if response[:requested_with]
@@ -28,7 +29,7 @@ module OptimusPrime
     end
 
     post "/get/*" do
-      path = self.env["REQUEST_URI"].sub("/get/", "")
+      path = get_response
       response = responses[path]
       return 404 if response.nil?
 
@@ -54,7 +55,6 @@ module OptimusPrime
     end
 
     get "/get/*" do
-      #path = self.env["REQUEST_URI"].sub("/get/", "")
       response = get_response
       return 404 if response.nil?
       sleep(response[:sleep].to_f) if response[:sleep]

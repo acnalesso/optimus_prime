@@ -9,7 +9,7 @@ module OptimusPrime
     set :public_folder, __dir__ + "/server/public"
 
     put "/get/*" do
-      path = get_response
+      path = get_path
       response = responses[path]
 
       return 404 if response.nil?
@@ -29,7 +29,7 @@ module OptimusPrime
     end
 
     post "/get/*" do
-      path = get_response
+      path = get_path
       response = responses[path]
       return 404 if response.nil?
 
@@ -49,13 +49,13 @@ module OptimusPrime
       response[:body]
     end
 
-    def get_response
-      path = self.env["REQUEST_URI"].sub("/get/", "")
-      responses[path]
+    def get_path
+      self.env["REQUEST_URI"].scan(/^\/get\/([\/\w+]+)(\/|\?|$)/).flatten[0]
     end
 
     get "/get/*" do
-      response = get_response
+      path = get_path
+      response = responses[path]
       return 404 if response.nil?
       sleep(response[:sleep].to_f) if response[:sleep]
 

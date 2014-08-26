@@ -35,13 +35,6 @@ describe OptimusPrime do
     expect(JSON.parse(response.body)).to eq({ "username" => "Antonio", "age" => 21 })
   end
 
-  it "retrieves from url with params" do
-    op.prime("getUser?id=10&queue=NaN", { username: "Test" }.to_json, content_type: :json)
-    response = ::Faraday.get('http://localhost:7003/get/getUser?id=10&queue=NaN')
-
-    expect( JSON.parse(response.body) ).to eq({ "username" => "Test" })
-  end
-
   it "returns a 404 when endpoint is not found" do
     response = ::Faraday.get('http://localhost:7003/get/iDoNotExist')
 

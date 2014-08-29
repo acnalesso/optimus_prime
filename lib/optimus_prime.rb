@@ -12,7 +12,8 @@ module OptimusPrime
   end
 
   def self.start_server(options={})
-    @@op_port = ENV["OP.ENV"] == "test" ? 7003 : options[:port]
+    @@op_port = 7003 if ENV["OP.ENV"] == "test"
+    @@op_port = options[:port] if options[:port]
 
     `mkdir -p ./tmp/pids`
     return `echo 'Optimus is already priming :)'` if system("ls ./tmp/pids/optimus_prime.pid")

@@ -50,7 +50,8 @@ module OptimusPrime
     end
 
     def get_path
-      self.env["REQUEST_URI"].scan(/^\/get\/([\/\w+]+)(\/|\?|$)/).flatten[0]
+      # self.env["REQUEST_URI"].scan(/^\/get\/([\/\w+]+)(\/|\?|$)/).flatten[0]
+      self.env["REQUEST_URI"].sub("/get/", "")
     end
 
     get "/get/*" do

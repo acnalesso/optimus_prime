@@ -38,8 +38,10 @@ module OptimusPrime
       end
 
 
-      new_body = params.tap { |p| p.delete("splat"); p.delete("captures") }
-      @@responses[path][:body] = new_body.to_json
+      if response[:persisted]
+        new_body = params.tap { |p| p.delete("splat"); p.delete("captures") }
+        @@responses[path][:body] = new_body.to_json
+      end
 
       content_type(response[:content_type])
       status(response[:status_code])

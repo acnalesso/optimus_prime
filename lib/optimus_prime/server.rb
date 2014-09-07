@@ -8,11 +8,17 @@ module OptimusPrime
 
     set :public_folder, __dir__ + "/server/public"
 
+    @@responses ||= {}
+    @@not_primed ||= {}
+
     put "/get/*" do
       path = get_path
       response = responses[path]
 
-      return 404 if response.nil?
+      if response.nil?
+        @@not_primed[path] = { time: Time.now.to_s, HTTP_METHOD: env["REQUEST_METHOD"] }
+        return 404
+      end
 
       if response[:requested_with]
         return 404 unless eval("request.body.string.include?('#{response[:requested_with]}')")
@@ -31,7 +37,11 @@ module OptimusPrime
     post "/get/*" do
       path = get_path
       response = responses[path]
-      return 404 if response.nil?
+
+      if response.nil?
+        @@not_primed[path] = { time: Time.now.to_s, HTTP_METHOD: env["REQUEST_METHOD"] }
+        return 404
+      end
 
       if response[:requested_with]
         return 404 unless eval("request.body.string.include?('#{response[:requested_with]}')")
@@ -59,7 +69,12 @@ module OptimusPrime
     get "/get/*" do
       path = get_path
       response = responses[path]
-      return 404 if response.nil?
+
+      if response.nil?
+        @@not_primed[path] = { time: Time.now.to_s, HTTP_METHOD: env["REQUEST_METHOD"] }
+        return 404
+      end
+
       sleep(response[:sleep].to_f) if response[:sleep]
 
       content_type(response[:content_type])
@@ -82,10 +97,15 @@ module OptimusPrime
       @@responses = {}
     end
 
+    get "/not-primed" do
+      content_type :json
+      @@not_primed.to_json
+    end
+
     private
 
       def responses
-        @@responses ||= {}
+        @@responses
       end
 
       def get_boolean(boolean)

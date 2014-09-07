@@ -102,14 +102,6 @@ describe OptimusPrime do
 
   end
 
-  it "#POST creates a record for with default params" do
-    op.prime("posts/1", {}, content_type: :json)
-
-    ::Faraday.post("http://localhost:7003/get/posts/1", { text: "I have been created", age: 21, category: "user" })
-
-    expect( JSON.parse(::Faraday.get("http://localhost:7003/get/posts/1").body, symbolize_names: true) ).to eq({:age=>"21", :category=>"user", :text=>"I have been created"})
-  end
-
   context "#PUT" do
     it "persists a request when told so" do
       op.prime("persisted", { text: "" }.to_json, persisted: true, content_type: :json)
@@ -119,6 +111,28 @@ describe OptimusPrime do
       ::Faraday.put("http://localhost:7003/get/persisted", { id: 1 })
 
       expect( JSON.parse(::Faraday.get("http://localhost:7003/get/persisted").body, symbolize_names: true) ).to eq({ text: "", id: "1"})
+    end
+
+  end
+
+  context "Requests not primed" do
+
+    it "GET", "tracks requests that have not been primed" do
+      ::Faraday.get("http://localhost:7003/get/get/i-am-not-primed")
+      expect( ::Faraday.get("http://localhost:7003/not-primed").body ).to include('i-am-not-primed')
+      expect( ::Faraday.get("http://localhost:7003/not-primed").body ).to include('GET')
+    end
+
+    it "POST", "tracks requests that have not been primed" do
+      ::Faraday.post("http://localhost:7003/get/post/i-am-not-primed")
+      expect( ::Faraday.get("http://localhost:7003/not-primed").body ).to include('i-am-not-primed')
+      expect( ::Faraday.get("http://localhost:7003/not-primed").body ).to include('POST')
+    end
+
+    it "PUT", "tracks requests that have not been primed" do
+      ::Faraday.put("http://localhost:7003/get/put/i-am-not-primed", "")
+      expect( ::Faraday.get("http://localhost:7003/not-primed").body ).to include('i-am-not-primed')
+      expect( ::Faraday.get("http://localhost:7003/not-primed").body ).to include('PUT')
     end
 
   end

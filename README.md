@@ -98,11 +98,24 @@ response = Faraday.get("http://localhost:7002/get/users")
 response.status #=> 200
 ```
 
+## Requests not primed
+```ruby
+  ::Faraday.get("http://localhost:7002/get/i-am-not-primed")
+
+```
+ Now go to http://localhost:7002/not-primed
+```json
+get/i-am-not-primed: {
+  time: "2014-09-07 18:50:57 +0100",
+  HTTP_METHOD: "GET"
+}
+```
+
 
 ## TODO
   * Move server initialisation into rake task in order to prevent it from initialising
 from its directory.
-  * Support DELETE, HEAD, PUT http methods
+  * Support DELETE, HEAD http methods
   * Support REGEX as a path
   * Support html templates
 

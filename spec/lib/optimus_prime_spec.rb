@@ -137,4 +137,13 @@ describe OptimusPrime do
 
   end
 
+  it "lets you know how many times a service was called since primed" do
+    op.prime("continue", { username: "Test" }.to_json, content_type: :json)
+    expect( ::Faraday.get("http://localhost:7003/requests", { path_name: "continue" }).body ).to eq("{\"count\":0}")
+    expect( op.count('continue') ).to eq(0)
+    ::Faraday.get("http://localhost:7003/get/continue")
+    expect( op.count('continue') ).to eq(1)
+    expect( ::Faraday.get("http://localhost:7003/requests", { path_name: "continue" }).body ).to eq("{\"count\":1}")
+  end
+
 end

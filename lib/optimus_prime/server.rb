@@ -9,6 +9,7 @@ module OptimusPrime
     set :public_folder, __dir__ + "/server/public"
 
     @@responses ||= {}
+    @@requests ||= {}
     @@not_primed ||= {}
 
     put "/get/*" do
@@ -75,6 +76,8 @@ module OptimusPrime
         return 404
       end
 
+      requests[path][:count] += 1
+
       sleep(response[:sleep].to_f) if response[:sleep]
 
       content_type(response[:content_type])
@@ -85,6 +88,7 @@ module OptimusPrime
     post "/prime" do
       path = params["path_name"]
       responses[path] = { content_type: (params["content_type"] || :html), body: params["response"], status_code: (params["status_code"] || 200), requested_with: (params["requested_with"] || false), sleep: (params["sleep"] || false), persisted: (params["persisted"] || false) }
+      requests[path] = { count: 0 }
       201
     end
 
@@ -97,6 +101,11 @@ module OptimusPrime
       @@responses = {}
     end
 
+    get "/requests" do
+      path = params["path_name"]
+      requests[path].to_json
+    end
+
     get "/not-primed" do
       content_type :json
       @@not_primed.to_json
@@ -106,6 +115,10 @@ module OptimusPrime
 
       def responses
         @@responses
+      end
+
+      def requests
+        @@requests
       end
 
       def get_boolean(boolean)

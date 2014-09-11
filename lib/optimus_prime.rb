@@ -50,5 +50,10 @@ module OptimusPrime
       ::Faraday.get("http://localhost:#{OptimusPrime.op_port}/clear")
     end
 
+    def count(path_name)
+      response = ::Faraday.get("http://localhost:#{OptimusPrime.op_port}/requests", { path_name: path_name }).body
+      JSON.parse(response)["count"]
+    end
+
   end
 end

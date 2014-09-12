@@ -3696,3 +3696,108 @@ Thin web server (v1.6.2 codename Doc Brown)
 Debugging ON
 Maximum connections set to 1024
 Listening on 0.0.0.0:7003, CTRL+C to stop
+Writing PID to /Users/mars/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/mars/dev/optimus_prime/lib/optimus_prime/server.rb @ line 75 OptimusPrime::Server#record_request:
+
+    [1;34m72[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m73[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m74[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m
+ => [1;34m75[0m:   binding.pry
+    [1;34m76[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.body.read}
+    [1;34m77[0m:   requests[path][[33m:requests[0m].push(request_made)
+    [1;34m78[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> Waiting for 2 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+Exiting!
+Writing PID to /Users/mars/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+/Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/eventmachine-1.0.3/lib/eventmachine.rb:526:in `start_tcp_server': no acceptor (port is in use or requires root privileges) (RuntimeError)
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/eventmachine-1.0.3/lib/eventmachine.rb:526:in `start_server'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/thin-1.6.2/lib/thin/backends/tcp_server.rb:16:in `connect'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/thin-1.6.2/lib/thin/backends/base.rb:63:in `block in start'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `call'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/thin-1.6.2/lib/thin/controllers/controller.rb:87:in `start'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/thin-1.6.2/lib/thin/runner.rb:199:in `run_command'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/thin-1.6.2/lib/thin/runner.rb:155:in `run!'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/thin-1.6.2/bin/thin:6:in `<top (required)>'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/bin/thin:23:in `load'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/bin/thin:23:in `<main>'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/bin/ruby_executable_hooks:15:in `eval'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/bin/ruby_executable_hooks:15:in `<main>'
+Writing PID to /Users/mars/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/mars/dev/optimus_prime/lib/optimus_prime/server.rb @ line 75 OptimusPrime::Server#record_request:
+
+    [1;34m72[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m73[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m74[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m
+ => [1;34m75[0m:   binding.pry
+    [1;34m76[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.body.read}
+    [1;34m77[0m:   requests[path][[33m:requests[0m].push(request_made)
+    [1;34m78[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/mars/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+/Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/eventmachine-1.0.3/lib/eventmachine.rb:526:in `start_tcp_server': no acceptor (port is in use or requires root privileges) (RuntimeError)
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/eventmachine-1.0.3/lib/eventmachine.rb:526:in `start_server'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/thin-1.6.2/lib/thin/backends/tcp_server.rb:16:in `connect'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/thin-1.6.2/lib/thin/backends/base.rb:63:in `block in start'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `call'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/thin-1.6.2/lib/thin/controllers/controller.rb:87:in `start'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/thin-1.6.2/lib/thin/runner.rb:199:in `run_command'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/thin-1.6.2/lib/thin/runner.rb:155:in `run!'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/gems/thin-1.6.2/bin/thin:6:in `<top (required)>'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/bin/thin:23:in `load'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/bin/thin:23:in `<main>'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/bin/ruby_executable_hooks:15:in `eval'
+	from /Users/mars/.rvm/gems/ruby-2.1.1@order-tracking/bin/ruby_executable_hooks:15:in `<main>'
+Writing PID to /Users/mars/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+Writing PID to /Users/mars/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+Writing PID to /Users/mars/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop

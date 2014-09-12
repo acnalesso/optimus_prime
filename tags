@@ -18,6 +18,7 @@ get_path	lib/optimus_prime/server.rb	/^    def get_path$/;"	f
 op_port	lib/optimus_prime.rb	/^  def self.op_port; @@op_port; end$/;"	F	class:OptimusPrime
 optimus_prime_path	lib/optimus_prime.rb	/^  def self.optimus_prime_path$/;"	F	class:OptimusPrime
 prime	lib/optimus_prime.rb	/^    def prime(path_name, response="", options={})$/;"	f	class:OptimusPrime.Base
+record_request	lib/optimus_prime/server.rb	/^    def record_request(path)$/;"	f
 requests	lib/optimus_prime.rb	/^    def requests(path_name)$/;"	f	class:OptimusPrime.Base
 requests	lib/optimus_prime/server.rb	/^      def requests$/;"	f
 responses	lib/optimus_prime/server.rb	/^      def responses$/;"	f

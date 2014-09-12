@@ -59,9 +59,7 @@ module OptimusPrime
         @@responses[path][:body] = new_body.to_json
       end
 
-      requests[path][:count] += 1
-      request_made = {method: self.env["REQUEST_METHOD"], body: request.body.read}
-      requests[path][:requests].push(request_made)
+      record_request(path)
 
       content_type(response[:content_type])
       status(response[:status_code])
@@ -69,6 +67,12 @@ module OptimusPrime
       sleep(response[:sleep].to_i) if response[:sleep]
 
       response[:body]
+    end
+
+    def record_request(path)
+      requests[path][:count] += 1
+      request_made = {method: self.env["REQUEST_METHOD"], body: request.params }
+      requests[path][:requests].push(request_made)
     end
 
     def get_path
@@ -85,9 +89,7 @@ module OptimusPrime
         return 404
       end
 
-      requests[path][:count] += 1
-      request_made = {method: self.env["REQUEST_METHOD"], body: request.body.read}
-      requests[path][:requests].push(request_made)
+      record_request(path)
 
       sleep(response[:sleep].to_f) if response[:sleep]
 

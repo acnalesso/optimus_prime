@@ -164,15 +164,21 @@ describe OptimusPrime do
     it "GET" do
       op.prime("continue", { username: "Test" }.to_json, content_type: :json)
       ::Faraday.get("http://localhost:7003/get/continue")
-      expect( ::Faraday.get("http://localhost:7003/requests/continue").body ).to include("\"requests\":[{\"method\":\"GET\",\"body\":\"\"}]")
-      expect( op.requests("continue") ).to eq([{ "method" => "GET", "body" => "" }])
+      expect( ::Faraday.get("http://localhost:7003/requests/continue").body ).to include("\"requests\":[{\"method\":\"GET\",\"body\":{}}]")
+      expect( op.requests("continue") ).to eq([{ "method" => "GET", "body" => {} }])
     end
 
     it "POST" do
       op.prime("kermit", { username: "Test" }.to_json, content_type: :json)
       ::Faraday.post("http://localhost:7003/get/kermit", { username: "Test" })
-      expect( ::Faraday.get("http://localhost:7003/requests/kermit").body ).to include("\"requests\":[{\"method\":\"POST\",\"body\":\"username=Test\"}]")
-      expect( op.requests("kermit") ).to eq([{ "method" => "POST", "body" => "username=Test" }])
+      expect( ::Faraday.get("http://localhost:7003/requests/kermit").body ).to include("\"requests\":[{\"method\":\"POST\",\"body\":{\"username\":\"Test\"}}]")
+      expect( op.requests("kermit") ).to eq([{ "method" => "POST", "body" => { "username" => "Test" } }])
+    end
+
+    it "returns a decoded body" do
+      op.prime("kermit", { username: "Test" }.to_json, content_type: :json)
+      ::Faraday.post("http://localhost:7003/get/kermit", { word: "with spaces and other shit" })
+      expect( op.requests("kermit") ).to eq([{ "method" => "POST", "body" => {"word" => "with spaces and other shit"} }])
     end
 
   end

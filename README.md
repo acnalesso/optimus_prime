@@ -111,6 +111,25 @@ get/i-am-not-primed: {
 }
 ```
 
+## Counting the number of requests made for an endpoint (GET and POST)
+```ruby
+  op.prime('your/endpoint')
+  Faraday.get("http://localhost:7002/get/your/endpoint")
+  op.count('your/endpoint') #=> 1
+```
+
+## Get the requests made to an endpoint
+```ruby
+  # GET Requests
+  op.prime('your/endpoint')
+  Faraday.get("http://localhost:7002/get/your/endpoint")
+  op.count('your/endpoint') #=> ["method" => "GET", "body" => ""]
+
+  # POST Requests
+  op.prime('your/endpoint')
+  Faraday.post("http://localhost:7002/get/your/endpoint", {some: "data"})
+  op.count('your/endpoint') #=> ["method" => "GET", "body" => "some=data"]
+```
 
 ## TODO
   * Move server initialisation into rake task in order to prevent it from initialising

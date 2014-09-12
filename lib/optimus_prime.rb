@@ -51,12 +51,13 @@ module OptimusPrime
     end
 
     def count(path_name)
-      response = ::Faraday.get("http://localhost:#{OptimusPrime.op_port}/requests", { path_name: path_name }).body
-      JSON.parse(response)["count"]
+      requests = ::Faraday.get("http://localhost:#{OptimusPrime.op_port}/requests/#{path_name}").body
+      JSON.parse(requests)["count"]
     end
 
     def requests(path_name)
-      ::Faraday.get("http://localhost:#{OptimusPrime.op_port}/requests", { path_name: path_name }).body
+      requests = ::Faraday.get("http://localhost:#{OptimusPrime.op_port}/requests/#{path_name}").body
+      JSON.parse(requests)["requests"]
     end
 
   end

@@ -54,6 +54,7 @@ module OptimusPrime
         @@responses[path][:body] = new_body.to_json
       end
 
+      requests[path][:count] += 1
       request_made = {method: self.env["REQUEST_METHOD"], body: request.body.read}
       requests[path][:requests].push(request_made)
 
@@ -67,7 +68,7 @@ module OptimusPrime
 
     def get_path
       # self.env["REQUEST_URI"].scan(/^\/get\/([\/\w+]+)(\/|\?|$)/).flatten[0]
-      self.env["REQUEST_URI"].sub("/get/", "")
+      self.env["REQUEST_URI"].sub(/\/get\/|\/requests\//, "")
     end
 
     get "/get/*" do
@@ -80,6 +81,8 @@ module OptimusPrime
       end
 
       requests[path][:count] += 1
+      request_made = {method: self.env["REQUEST_METHOD"], body: request.body.read}
+      requests[path][:requests].push(request_made)
 
       sleep(response[:sleep].to_f) if response[:sleep]
 
@@ -104,8 +107,8 @@ module OptimusPrime
       @@responses = {}
     end
 
-    get "/requests" do
-      path = params["path_name"]
+    get "/requests/*" do
+      path = get_path
       requests[path].to_json
     end
 

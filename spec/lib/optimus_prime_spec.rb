@@ -137,19 +137,44 @@ describe OptimusPrime do
 
   end
 
-  it "lets you know how many times GET requests made for a path" do
-    op.prime("continue", { username: "Test" }.to_json, content_type: :json)
-    expect( ::Faraday.get("http://localhost:7003/requests", { path_name: "continue" }).body ).to include("\"count\":0")
-    expect( op.count('continue') ).to eq(0)
-    ::Faraday.get("http://localhost:7003/get/continue")
-    expect( op.count('continue') ).to eq(1)
-    expect( ::Faraday.get("http://localhost:7003/requests", { path_name: "continue" }).body ).to include("\"count\":1")
+  context "lets you know how many times a request is made for a path" do
+
+    it "GET" do
+      op.prime("continue", { username: "Test" }.to_json, content_type: :json)
+      expect( ::Faraday.get("http://localhost:7003/requests/continue").body ).to include("\"count\":0")
+      expect( op.count('continue') ).to eq(0)
+      ::Faraday.get("http://localhost:7003/get/continue")
+      expect( op.count('continue') ).to eq(1)
+      expect( ::Faraday.get("http://localhost:7003/requests/continue").body ).to include("\"count\":1")
+    end
+
+    it "POST" do
+      op.prime("kermit", { username: "Test" }.to_json, content_type: :json)
+      expect( ::Faraday.get("http://localhost:7003/requests/kermit").body ).to include("\"count\":0")
+      expect( op.count('kermit') ).to eq(0)
+      ::Faraday.post("http://localhost:7003/get/kermit")
+      expect( op.count('kermit') ).to eq(1)
+      expect( ::Faraday.get("http://localhost:7003/requests/kermit").body ).to include("\"count\":1")
+    end
+
   end
 
-  it "returns the POST requests made for a path" do
-    op.prime("continue", { username: "Test" }.to_json, content_type: :json)
-    ::Faraday.post("http://localhost:7003/get/continue", { username: "Test" })
-    expect( ::Faraday.get("http://localhost:7003/requests", { path_name: "continue" }).body ).to include("\"requests\":[{\"method\":\"POST\",\"body\":\"username=Test\"}]")
+  context "it returns the requests made for a path" do
+
+    it "GET" do
+      op.prime("continue", { username: "Test" }.to_json, content_type: :json)
+      ::Faraday.get("http://localhost:7003/get/continue")
+      expect( ::Faraday.get("http://localhost:7003/requests/continue").body ).to include("\"requests\":[{\"method\":\"GET\",\"body\":\"\"}]")
+      expect( op.requests("continue") ).to eq([{ "method" => "GET", "body" => "" }])
+    end
+
+    it "POST" do
+      op.prime("kermit", { username: "Test" }.to_json, content_type: :json)
+      ::Faraday.post("http://localhost:7003/get/kermit", { username: "Test" })
+      expect( ::Faraday.get("http://localhost:7003/requests/kermit").body ).to include("\"requests\":[{\"method\":\"POST\",\"body\":\"username=Test\"}]")
+      expect( op.requests("kermit") ).to eq([{ "method" => "POST", "body" => "username=Test" }])
+    end
+
   end
 
 end

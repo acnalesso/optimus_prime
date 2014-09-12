@@ -54,6 +54,9 @@ module OptimusPrime
         @@responses[path][:body] = new_body.to_json
       end
 
+      request_made = {method: self.env["REQUEST_METHOD"], body: request.body.read}
+      requests[path][:requests].push(request_made)
+
       content_type(response[:content_type])
       status(response[:status_code])
 
@@ -88,7 +91,7 @@ module OptimusPrime
     post "/prime" do
       path = params["path_name"]
       responses[path] = { content_type: (params["content_type"] || :html), body: params["response"], status_code: (params["status_code"] || 200), requested_with: (params["requested_with"] || false), sleep: (params["sleep"] || false), persisted: (params["persisted"] || false) }
-      requests[path] = { count: 0 }
+      requests[path] = { count: 0, requests: [] }
       201
     end
 

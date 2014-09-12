@@ -55,5 +55,9 @@ module OptimusPrime
       JSON.parse(response)["count"]
     end
 
+    def requests(path_name)
+      ::Faraday.get("http://localhost:#{OptimusPrime.op_port}/requests", { path_name: path_name }).body
+    end
+
   end
 end

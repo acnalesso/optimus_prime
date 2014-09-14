@@ -33,9 +33,8 @@ module OptimusPrime
       sleep(response[:sleep].to_i) if response[:sleep]
 
       if response[:persisted]
-        new_body = params.tap { |p| p.delete("splat"); p.delete("captures") }
-
-        @@responses[path][:body] = JSON.parse(response[:body]).merge!(new_body).to_json
+        new_body = request.body.read
+        @@responses[path][:body] = JSON.parse(response[:body]).merge!(JSON.parse(new_body)).to_json
       end
       201
     end

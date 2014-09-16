@@ -118,6 +118,10 @@ module OptimusPrime
       requests[path].to_json
     end
 
+    get "/requests" do
+      @@requests.to_json
+    end
+
     get "/not-primed" do
       content_type :json
       @@not_primed.to_json

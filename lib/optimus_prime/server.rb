@@ -39,8 +39,8 @@ module OptimusPrime
       end
 
       record_request(path)
-
-      201
+      content_type(response[:content_type])
+      status(response[:status_code] || 201)
     end
 
     post "/get/*" do

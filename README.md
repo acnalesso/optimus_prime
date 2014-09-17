@@ -26,10 +26,12 @@ to it and get the desired response.
   * localhost:7003 -> TEST default endpoint
   * returns 200 status code for GET,POST
   * sets content-type to text
+  * wait_for is 3 seconds
 
 ## HTTP allowed requests
  * GET
  * POST
+ * PUT
 
 # Usage
 ```ruby
@@ -127,12 +129,17 @@ By default OptimusPrime sets <code>wait_for</code> flag to 3 seconds.
   # GET Requests
   op.prime('your/endpoint')
   Faraday.get("http://localhost:7002/get/your/endpoint")
-  op.requests('your/endpoint') #=> ["method" => "GET", "body" => ""]
+  op.last_request_for('your/endpoint') #=> ["method" => "GET", "body" => ""]
 
   # POST Requests
   op.prime('your/endpoint')
   Faraday.post("http://localhost:7002/get/your/endpoint", {some: "data"})
-  op.requests('your/endpoint') #=> ["method" => "GET", "body" => "some=data", "headers" => { "content_type": "", accept: [] } ]
+  op.last_request_for('your/endpoint') #=> ["method" => "GET", "body" => "some=data", "headers" => { "content_type": "", accept: [] } ]
+```
+
+## Clear all requests
+```ruby
+  op.clear
 ```
 
 ## TODO

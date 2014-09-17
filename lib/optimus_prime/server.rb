@@ -27,7 +27,8 @@ module OptimusPrime
       end
 
       if response[:requested_with]
-        return 404 unless eval("request.body.string.include?('#{response[:requested_with]}')")
+        request.body.rewind
+        return 404 unless eval("request.body.read.include?('#{response[:requested_with]}')")
       end
 
       sleep(response[:sleep].to_i) if response[:sleep]
@@ -52,7 +53,8 @@ module OptimusPrime
       end
 
       if response[:requested_with]
-        return 404 unless eval("request.body.string.include?('#{response[:requested_with]}')")
+        request.body.rewind
+        return 404 unless eval("request.body.read.include?('#{response[:requested_with]}')")
       end
 
 
@@ -73,7 +75,7 @@ module OptimusPrime
 
     def record_request(path)
       requests[path][:count] += 1
-      request_made = {method: self.env["REQUEST_METHOD"], body: request.params }
+      request_made = {method: self.env["REQUEST_METHOD"], body: request.params, headers: { content_type: request.content_type, accept: request.accept } }
       requests[path][:requests].push(request_made)
     end
 

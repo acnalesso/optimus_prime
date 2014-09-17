@@ -163,28 +163,26 @@ describe OptimusPrime do
 
     it "GET" do
       op.prime("continue", { username: "Test" }.to_json, content_type: :json)
-      ::Faraday.get("http://localhost:7003/get/continue")
-      expect( ::Faraday.get("http://localhost:7003/requests/continue").body ).to include("\"requests\":[{\"method\":\"GET\",\"body\":{}}]")
-      expect( op.requests("continue") ).to eq([{ "method" => "GET", "body" => {} }])
+      ::Faraday.get("http://localhost:7003/get/continue", nil, { "Content-Type" => "application/json", "Accept" => "application/json" })
+      expect( op.requests("continue") ).to eq([{ "method" => "GET", "body" => {}, "headers" => { "content_type" => "application/json", "accept" => ["application/json"] } }])
     end
 
     it "POST" do
       op.prime("kermit", { username: "Test" }.to_json, content_type: :json)
       ::Faraday.post("http://localhost:7003/get/kermit", { username: "Test" })
-      expect( ::Faraday.get("http://localhost:7003/requests/kermit").body ).to include("\"requests\":[{\"method\":\"POST\",\"body\":{\"username\":\"Test\"}}]")
-      expect( op.requests("kermit") ).to eq([{ "method" => "POST", "body" => { "username" => "Test" } }])
+      expect( op.requests("kermit") ).to eq([{ "method" => "POST", "body" => { "username" => "Test" }, "headers"=>{ "content_type"=>"application/x-www-form-urlencoded", "accept"=>["*/*"]} }])
     end
 
     it "PUT" do
       op.prime("put/kermit", { username: "Test" }.to_json, content_type: :json)
       ::Faraday.put("http://localhost:7003/get/put/kermit", { username: "Test" })
-      expect( op.requests("put/kermit") ).to eq([{ "method" => "PUT", "body" => { "username" => "Test" } }])
+      expect( op.requests("put/kermit") ).to eq([{"method"=>"PUT", "body"=>{"username"=>"Test"}, "headers"=>{"content_type"=>"application/x-www-form-urlencoded", "accept"=>["*/*"]}}])
     end
 
     it "returns a decoded body" do
       op.prime("kermit", { username: "Test" }.to_json, content_type: :json)
       ::Faraday.post("http://localhost:7003/get/kermit", { word: "with spaces and other shit" })
-      expect( op.requests("kermit") ).to eq([{ "method" => "POST", "body" => {"word" => "with spaces and other shit"} }])
+      expect( op.requests("kermit") ).to eq([{"method"=>"POST", "body"=>{"word"=>"with spaces and other shit"}, "headers"=>{"content_type"=>"application/x-www-form-urlencoded", "accept"=>["*/*"]}}])
     end
 
 

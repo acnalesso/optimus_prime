@@ -76,7 +76,8 @@ module OptimusPrime
     def record_request(path)
       requests[path][:count] += 1
       request_made = {method: self.env["REQUEST_METHOD"], body: request.params, headers: { content_type: request.content_type, accept: request.accept } }
-      requests[path][:requests].push(request_made)
+      requests[path][:last_request] = request_made
+      require 'pry'; binding.pry
     end
 
     def get_path
@@ -105,7 +106,7 @@ module OptimusPrime
     post "/prime" do
       path = params["path_name"]
       responses[path] = { content_type: (params["content_type"] || :html), body: params["response"], status_code: (params["status_code"] || 200), requested_with: (params["requested_with"] || false), sleep: (params["sleep"] || false), persisted: (params["persisted"] || false) }
-      requests[path] = { count: 0, requests: [] }
+      requests[path] = { count: 0, last_request: nil }
       201
     end
 

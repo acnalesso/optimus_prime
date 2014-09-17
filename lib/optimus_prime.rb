@@ -42,6 +42,12 @@ module OptimusPrime
 
   class Base
 
+    attr_reader :wait_for
+
+    def initialize(opts={})
+      @wait_for = opts[:wait_for] || 3
+    end
+
     def prime(path_name, response="", options={})
       ::Faraday.post("http://localhost:#{OptimusPrime.op_port}/prime", { path_name: path_name, response: response }.merge!(options))
     end
@@ -55,9 +61,16 @@ module OptimusPrime
       JSON.parse(requests)["count"]
     end
 
-    def requests(path_name)
-      requests = ::Faraday.get("http://localhost:#{OptimusPrime.op_port}/requests/#{path_name}").body
-      JSON.parse(requests)["requests"]
+    def last_request_for(path_name)
+      seconds = 0
+      while :waiting
+        seconds += 0.3
+        requests = ::Faraday.get("http://localhost:#{OptimusPrime.op_port}/requests/#{path_name}").body
+        last_request = JSON.parse(requests)["last_request"]
+        return last_request if !last_request.nil? && !last_request.empty?
+        return {} if seconds.to_i == wait_for
+        sleep(0.3)
+      end
     end
 
   end

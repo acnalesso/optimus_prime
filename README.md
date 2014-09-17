@@ -119,16 +119,20 @@ get/i-am-not-primed: {
 ```
 
 ## Get the requests made to an endpoint
+You will have to pass how long to wait_for, as requests might be in process that is why we need to wait for it.
+By default OptimusPrime sets <code>wait_for</code> flag to 3 seconds.
 ```ruby
+  op = OptimusPrime.new(wait_for: 5)
+
   # GET Requests
   op.prime('your/endpoint')
   Faraday.get("http://localhost:7002/get/your/endpoint")
-  op.count('your/endpoint') #=> ["method" => "GET", "body" => ""]
+  op.requests('your/endpoint') #=> ["method" => "GET", "body" => ""]
 
   # POST Requests
   op.prime('your/endpoint')
   Faraday.post("http://localhost:7002/get/your/endpoint", {some: "data"})
-  op.count('your/endpoint') #=> ["method" => "GET", "body" => "some=data"]
+  op.requests('your/endpoint') #=> ["method" => "GET", "body" => "some=data", "headers" => { "content_type": "", accept: [] } ]
 ```
 
 ## TODO

@@ -36,6 +36,9 @@ module OptimusPrime
         new_body = request.body.read
         @@responses[path][:body] = JSON.parse(response[:body]).merge!(JSON.parse(new_body)).to_json
       end
+
+      record_request(path)
+
       201
     end
 

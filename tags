@@ -12,6 +12,7 @@ Server	lib/optimus_prime/server.rb	/^  class Server < ::Sinatra::Base$/;"	c	clas
 clear!	lib/optimus_prime.rb	/^    def clear!$/;"	f	class:OptimusPrime.Base
 count	lib/optimus_prime.rb	/^    def count(path_name)$/;"	f	class:OptimusPrime.Base
 current_path	lib/optimus_prime.rb	/^  def self.current_path; `pwd`.chomp; end$/;"	F	class:OptimusPrime
+expect	lib/optimus_prime.rb	/^    def expect(path_name, &block)$/;"	f	class:OptimusPrime.Base
 full_path	lib/optimus_prime.rb	/^  def self.full_path$/;"	F	class:OptimusPrime
 get_boolean	lib/optimus_prime/server.rb	/^      def get_boolean(boolean)$/;"	f
 get_path	lib/optimus_prime/server.rb	/^    def get_path$/;"	f

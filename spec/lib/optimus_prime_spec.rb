@@ -208,6 +208,33 @@ describe OptimusPrime do
 
   end
 
+  context "allow devs to expect a request to be made" do
 
+    it "does not raise an exception when the request has been made" do
+      op = OptimusPrime::Base.new(wait_for: 4)
+      op.prime("expectation", { status: "UNKOWN" }, content_type: :json)
+
+      ::Faraday.post("http://localhost:7003/get/expectation", { status: "IN_PROGRESS" } )
+      Thread.new { sleep(3); ::Faraday.post("http://localhost:7003/get/expectation", { status: "COMPLETED" } )}
+
+      op.expect("expectation") do |response|
+        expect(response["body"]["status"]).to eq("COMPLETED")
+      end
+
+    end
+
+    it "does raise an error when it times out" do
+      op = OptimusPrime::Base.new(wait_for: 1)
+      op.prime("timeOut", { status: "NO" }, content_type: :json)
+
+      ::Faraday.post("http://localhost:7003/get/timeOut", { status: "NO" } )
+      Thread.new { sleep(3); ::Faraday.post("http://localhost:7003/get/timeOut", { status: "YES" } )}
+
+      op.expect("timeOut") do |response|
+        expect(response["body"]["status"]).to eq("NO")
+      end
+    end
+
+  end
 
 end

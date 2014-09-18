@@ -137,6 +137,18 @@ By default OptimusPrime sets <code>wait_for</code> flag to 3 seconds.
   op.last_request_for('your/endpoint') #=> ["method" => "GET", "body" => "some=data", "headers" => { "content_type": "", accept: [] } ]
 ```
 
+## Passing expectations
+  Sometimes your ajax requests may take a while to fire when running on Continuous Integration Platforms like cicleCI for example.
+  Optimus Prime allows you to set a expectation that a request will be made within a given time.
+
+```ruby
+  op = OptimusPrime.new(wait_for: 3)
+
+  op.expect("path_name") do |response|
+    expect( response["body"] ).to include("CALLED")
+  end
+```
+
 ## Clear all requests
 ```ruby
   op.clear

@@ -64,12 +64,33 @@ module OptimusPrime
     def last_request_for(path_name)
       seconds = 0
       while :waiting
-        seconds += 0.3
+        return {} if seconds > wait_for.to_f
+        sleep(0.1)
+        seconds += 0.1
+
         requests = ::Faraday.get("http://localhost:#{OptimusPrime.op_port}/requests/#{path_name}").body
         last_request = JSON.parse(requests)["last_request"]
         return last_request if !last_request.nil? && !last_request.empty?
-        return {} if seconds.to_i == wait_for
-        sleep(0.3)
+      end
+    end
+
+    def expect(path_name, &block)
+      seconds = 0
+      while :waiting
+        sleep(0.1)
+        raise "Timeout - waited for: #{wait_for}. \n--> No requests have been made to: #{path_name} endpoint." if seconds > wait_for.to_f
+        seconds += 0.1
+
+        request = ::Faraday.get("http://localhost:#{OptimusPrime.op_port}/requests/#{path_name}").body
+
+        last_request = JSON.parse(request)["last_request"]
+
+        begin
+          return true if block.call(last_request)
+          rescue Exception => e
+            raise "#{e}" if seconds > wait_for.to_f
+        end
+
       end
     end
 

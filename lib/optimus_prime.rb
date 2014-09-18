@@ -74,10 +74,11 @@ module OptimusPrime
       end
     end
 
-    def expect(path_name, &block)
+    def wait_until_request(path_name, &block)
       seconds = 0
       while :waiting
         sleep(0.1)
+
         raise "Timeout - waited for: #{wait_for}. \n--> No requests have been made to: #{path_name} endpoint." if seconds > wait_for.to_f
         seconds += 0.1
 

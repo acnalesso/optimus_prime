@@ -7895,4 +7895,1737 @@ Listening on 0.0.0.0:7003, CTRL+C to stop
  => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
     [1;34m81[0m: [32mend[0m
 
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
 [0G[?1034h[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[?1034h[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 
+[1mFrom:[0m /Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb @ line 80 OptimusPrime::Server#record_request:
+
+    [1;34m76[0m: [32mdef[0m [1;34mrecord_request[0m(path)
+    [1;34m77[0m:   requests[path][[33m:count[0m] += [1;34m1[0m
+    [1;34m78[0m:   request_made = {[35mmethod[0m: [1;36mself[0m.env[[31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m], [35mbody[0m: request.params, [35mheaders[0m: { [35mcontent_type[0m: request.content_type, [35maccept[0m: request.accept } }
+    [1;34m79[0m:   requests[path][[33m:last_request[0m] = request_made
+ => [1;34m80[0m:   require [31m[1;31m'[0m[31mpry[1;31m'[0m[31m[0m; binding.pry
+    [1;34m81[0m: [32mend[0m
+
+[0G[1] pry(#<OptimusPrime::Server>)> 

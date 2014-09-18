@@ -187,17 +187,17 @@ describe OptimusPrime do
       expect( op.last_request_for("kermit") ).to eq({"method"=>"POST", "body"=>{"word"=>"with spaces and other shit"}, "headers"=>{"content_type"=>"application/x-www-form-urlencoded", "accept"=>["*/*"]}})
     end
 
-    it "tries for up to 2 seconds to get the last request" do
-      op = OptimusPrime::Base.new(wait_for: 2)
+    it "tries for up to 0.1 seconds to get the last request" do
+      op = OptimusPrime::Base.new(wait_for: 0.1)
       op.prime("waitMan", { status: "waiting" }.to_json, content_type: :json)
-      Thread.new { sleep(1); ::Faraday.get("http://localhost:7003/get/waitMan", nil, { "Content-Type" => "application/json", "Accept" => "application/json" })}
+      Thread.new { sleep(0.01); ::Faraday.get("http://localhost:7003/get/waitMan", nil, { "Content-Type" => "application/json", "Accept" => "application/json" })}
       expect( op.last_request_for("waitMan") ).to eq({ "method" => "GET", "body" => {}, "headers" => { "content_type" => "application/json", "accept" => ["application/json"] } })
     end
 
-    it "returns the last request as nil if it doesn't find a request after 2 seconds" do
-      op = OptimusPrime::Base.new(wait_for: 2)
+    it "returns the last request as nil if it doesn't find a request after 0.1 seconds" do
+      op = OptimusPrime::Base.new(wait_for: 0.1)
       op.prime("waitMan", { status: "waiting" }.to_json, content_type: :json)
-      Thread.new { sleep(3); ::Faraday.get("http://localhost:7003/get/waitMan", nil, { "Content-Type" => "application/json", "Accept" => "application/json" })}
+      Thread.new { sleep(0.5); ::Faraday.get("http://localhost:7003/get/waitMan", nil, { "Content-Type" => "application/json", "Accept" => "application/json" })}
       expect( op.last_request_for("waitMan") ).to eq({})
     end
 
@@ -208,31 +208,30 @@ describe OptimusPrime do
 
   end
 
-  context "allow devs to expect a request to be made" do
+  context "allow devs to wait for a request to be made" do
 
-    it "does not raise an exception when the request has been made" do
-      op = OptimusPrime::Base.new(wait_for: 4)
+    it "waits until the correct request has been made" do
+      op = OptimusPrime::Base.new(wait_for: 1)
       op.prime("expectation", { status: "UNKOWN" }, content_type: :json)
 
       ::Faraday.post("http://localhost:7003/get/expectation", { status: "IN_PROGRESS" } )
-      Thread.new { sleep(3); ::Faraday.post("http://localhost:7003/get/expectation", { status: "COMPLETED" } )}
+      Thread.new { sleep(0.5); ::Faraday.post("http://localhost:7003/get/expectation", { status: "COMPLETED" } )}
 
-      op.expect("expectation") do |response|
-        expect(response["body"]["status"]).to eq("COMPLETED")
+      op.wait_until_request("expectation") do |request|
+        expect(request["body"]["status"]).to eq("COMPLETED")
       end
 
     end
 
     it "does raise an error when it times out" do
-      op = OptimusPrime::Base.new(wait_for: 1)
+      op = OptimusPrime::Base.new(wait_for: 0.1)
       op.prime("timeOut", { status: "NO" }, content_type: :json)
 
-      ::Faraday.post("http://localhost:7003/get/timeOut", { status: "NO" } )
-      Thread.new { sleep(3); ::Faraday.post("http://localhost:7003/get/timeOut", { status: "YES" } )}
+      Thread.new { sleep(1); ::Faraday.post("http://localhost:7003/get/timeOut", { status: "YES" } ) }
 
-      op.expect("timeOut") do |response|
-        expect(response["body"]["status"]).to eq("NO")
-      end
+      expect do
+        op.wait_until_request("timeOut") { |request| }
+      end.to raise_error
     end
 
   end

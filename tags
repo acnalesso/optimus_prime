@@ -5,25 +5,24 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 Base	lib/optimus_prime.rb	/^  class Base$/;"	c	class:OptimusPrime
+Cannon	lib/optimus_prime.rb	/^  class Cannon$/;"	c	class:OptimusPrime
 OptimusPrime	lib/optimus_prime.rb	/^module OptimusPrime$/;"	m
 OptimusPrime	lib/optimus_prime/server.rb	/^module OptimusPrime$/;"	m
 OptimusPrime	lib/optimus_prime/version.rb	/^module OptimusPrime$/;"	m
 Server	lib/optimus_prime/server.rb	/^  class Server < ::Sinatra::Base$/;"	c	class:OptimusPrime
 clear!	lib/optimus_prime.rb	/^    def clear!$/;"	f	class:OptimusPrime.Base
 count	lib/optimus_prime.rb	/^    def count(path_name)$/;"	f	class:OptimusPrime.Base
-current_path	lib/optimus_prime.rb	/^  def self.current_path; `pwd`.chomp; end$/;"	F	class:OptimusPrime
-full_path	lib/optimus_prime.rb	/^  def self.full_path$/;"	F	class:OptimusPrime
+current_path	lib/optimus_prime.rb	/^    def current_path; `pwd`.chomp; end$/;"	f	class:OptimusPrime.Cannon
+fire	lib/optimus_prime.rb	/^    def self.fire!(port)$/;"	F	class:OptimusPrime.Cannon
 get_boolean	lib/optimus_prime/server.rb	/^      def get_boolean(boolean)$/;"	f
 get_path	lib/optimus_prime/server.rb	/^    def get_path$/;"	f
+initialize	lib/optimus_prime.rb	/^    def initialize$/;"	f	class:OptimusPrime.Cannon
 initialize	lib/optimus_prime.rb	/^    def initialize(opts={})$/;"	f	class:OptimusPrime.Base
 last_request_for	lib/optimus_prime.rb	/^    def last_request_for(path_name)$/;"	f	class:OptimusPrime.Base
-op_port	lib/optimus_prime.rb	/^  def self.op_port; @@op_port; end$/;"	F	class:OptimusPrime
-optimus_prime_path	lib/optimus_prime.rb	/^  def self.optimus_prime_path$/;"	F	class:OptimusPrime
+optimus_prime_path	lib/optimus_prime.rb	/^    def optimus_prime_path$/;"	f	class:OptimusPrime.Cannon
 prime	lib/optimus_prime.rb	/^    def prime(path_name, response="", options={})$/;"	f	class:OptimusPrime.Base
 record_request	lib/optimus_prime/server.rb	/^    def record_request(path)$/;"	f
 requests	lib/optimus_prime/server.rb	/^      def requests$/;"	f
 responses	lib/optimus_prime/server.rb	/^      def responses$/;"	f
-restart_server	lib/optimus_prime.rb	/^  def self.restart_server$/;"	F	class:OptimusPrime
-start_server	lib/optimus_prime.rb	/^  def self.start_server(options={})$/;"	F	class:OptimusPrime
-stop_server	lib/optimus_prime.rb	/^  def self.stop_server$/;"	F	class:OptimusPrime
+start_server	lib/optimus_prime.rb	/^    def start_server$/;"	f	class:OptimusPrime.Cannon
 wait_until_request	lib/optimus_prime.rb	/^    def wait_until_request(path_name, &block)$/;"	f	class:OptimusPrime.Base

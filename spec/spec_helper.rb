@@ -3,7 +3,6 @@ require "optimus_prime"
 RSpec.configure do |config|
   begin
     ENV["OP.ENV"] = "test"
-    OptimusPrime.start_server
 
     config.filter_run :focus
     config.run_all_when_everything_filtered = true

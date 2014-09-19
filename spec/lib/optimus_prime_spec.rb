@@ -1,4 +1,4 @@
-OptimusPrime.restart_server
+OptimusPrime::Cannon.fire!(7003)
 
 describe OptimusPrime do
 

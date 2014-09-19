@@ -22,7 +22,6 @@ OptimusPrime allows developers to persist fake date and tell their API to talk
 to it and get the desired response.
 
 ## Default configuration
-  * localhost:7002 -> default endpoint
   * localhost:7003 -> TEST default endpoint
   * returns 200 status code for GET,POST
   * sets content-type to text
@@ -35,14 +34,14 @@ to it and get the desired response.
 
 # Usage
 ```ruby
-OptimusPrime.start_server
+OptimusPrime::Cannon.fire!(7002)
 op = OptimusPrime::Base.new
 op.prime("path_name", response, options)
 ```
 
 changing port number:
 ```ruby
-OptimusPrime.start_server(port: 9292)
+OptimusPrime::Cannon.fire!(2020)
 op = OptimusPrime::Base.new
 op.prime("path_name", response, options)
 ```

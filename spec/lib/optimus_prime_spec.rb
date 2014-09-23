@@ -57,6 +57,13 @@ describe OptimusPrime do
     expect( response.status ).to eq 200
   end
 
+  it "supports patch request methods" do
+    op.prime("patch", { username: "Test" }.to_json, content_type: :json, persisted: true)
+    ::Faraday.patch('http://localhost:7003/get/patch', { username: "Changed" }.to_json)
+    response = ::Faraday.get('http://localhost:7003/get/patch')
+
+    expect( response.body ).to include("Changed")
+  end
 
   context "Asserting on request content" do
 

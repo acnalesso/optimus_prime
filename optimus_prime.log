@@ -10274,3 +10274,16 @@ Listening on 0.0.0.0:7003, CTRL+C to stop
  => [1;34m80[0m: [32mend[0m
 
 [1] pry(#<OptimusPrime::Server>)> 
+Writing PID to /Users/acnalesso/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+Writing PID to /Users/acnalesso/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.2 codename Doc Brown)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop

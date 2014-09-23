@@ -17,6 +17,32 @@ module OptimusPrime
     @@requests ||= {}
     @@not_primed ||= {}
 
+    patch "/get/*" do
+      path = get_path
+      response = responses[path]
+
+      if response.nil?
+        @@not_primed[path] = { time: Time.now.to_s, HTTP_METHOD: env["REQUEST_METHOD"] }
+        return 404
+      end
+
+      if response[:requested_with]
+        request.body.rewind
+        return 404 unless eval("request.body.read.include?('#{response[:requested_with]}')")
+      end
+
+      sleep(response[:sleep].to_i) if response[:sleep]
+
+      if response[:persisted]
+        new_body = request.body.read
+        @@responses[path][:body] = JSON.parse(response[:body]).merge!(JSON.parse(new_body)).to_json
+      end
+
+      record_request(path)
+      content_type(response[:content_type])
+      status(response[:status_code] || 201)
+    end
+
     put "/get/*" do
       path = get_path
       response = responses[path]

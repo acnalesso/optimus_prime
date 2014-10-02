@@ -101,7 +101,9 @@ module OptimusPrime
 
     def record_request(path)
       requests[path][:count] += 1
-      request_made = { method: self.env["REQUEST_METHOD"], body: request.body.string, headers: { content_type: request.content_type, accept: request.accept } }
+      params.delete("splat")
+      params.delete("captures")
+      request_made = { method: self.env["REQUEST_METHOD"], body: params, headers: { content_type: request.content_type, accept: request.accept } }
       requests[path][:last_request] = request_made
     end
 

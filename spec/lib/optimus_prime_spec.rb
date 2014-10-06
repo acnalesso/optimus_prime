@@ -85,6 +85,27 @@ describe OptimusPrime do
 
   end
 
+  %w{ get post put patch }.each do |request_method|
+    it "does not return the #{request_method} body when status code is 404" do
+      op.prime("error404", { username: "Test" }.to_json, content_type: :json, status_code: 404)
+
+      response = ::Faraday.send(request_method, 'http://localhost:7003/get/error404')
+
+      expect( response.body ).to eq("")
+    end
+  end
+
+  %w{ get post put patch }.each do |request_method|
+    it "does not return the #{request_method} body when status code is 500" do
+      op.prime("error500", { username: "Test" }.to_json, content_type: :json, status_code: 500)
+
+        response = ::Faraday.send(request_method, 'http://localhost:7003/get/error500')
+
+        expect( response.body ).to eq("")
+    end
+  end
+
+
   context "Server processing" do
 
     it "#GET tells the server to sleep for 10 seconds in order to reproduce timeouts" do

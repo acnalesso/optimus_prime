@@ -12,6 +12,8 @@ module OptimusPrime
     end
 
     set :public_folder, __dir__ + "/server/public"
+    set :show_exceptions, false
+    set :raise_erros, false
 
     @@responses ||= {}
     @@requests ||= {}
@@ -41,6 +43,7 @@ module OptimusPrime
       record_request(path)
       content_type(response[:content_type])
       status(response[:status_code] || 201)
+      return "" if response[:status_code] =~ /500|404/
     end
 
     put "/get/*" do
@@ -67,6 +70,7 @@ module OptimusPrime
       record_request(path)
       content_type(response[:content_type])
       status(response[:status_code] || 201)
+      return "" if response[:status_code] =~ /500|404/
     end
 
     post "/get/*" do
@@ -96,6 +100,7 @@ module OptimusPrime
 
       sleep(response[:sleep].to_i) if response[:sleep]
 
+      return "" if response[:status_code] =~ /500|404/
       response[:body]
     end
 
@@ -127,6 +132,7 @@ module OptimusPrime
 
       content_type(response[:content_type])
       status(response[:status_code])
+      return "" if response[:status_code] =~ /500|404/
       response[:body]
     end
 

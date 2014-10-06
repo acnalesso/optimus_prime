@@ -26,6 +26,7 @@ to it and get the desired response.
   * returns 200 status code for GET,POST
   * sets content-type to text
   * wait_for is 3 seconds
+  * Returns empty body when status_code is 404/500
 
 ## HTTP allowed requests
  * GET

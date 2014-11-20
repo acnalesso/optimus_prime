@@ -2,6 +2,12 @@ OptimusPrime::Cannon.fire!(7003)
 
 describe OptimusPrime do
 
+  after(:all) do
+    if File.exists?(File.expand_path("../../tmp/pids/optimus_prime.pid", __dir__))
+      system("thin stop -P #{File.expand_path("../../tmp/pids/optimus_prime.pid", __dir__)}")
+    end
+  end
+
   let(:op) { OptimusPrime::Base.new }
 
   it "primes an endpoint" do
@@ -9,7 +15,7 @@ describe OptimusPrime do
   end
 
   it "primes an endpoint with attributes" do
-    op.prime("test", "I am a response")
+    op.prime("test", "I am a response", content_type: "text/html")
 
     response = ::Faraday.get("http://localhost:7003/get/test")
     expect( response.body ).to eq "I am a response"
@@ -68,7 +74,7 @@ describe OptimusPrime do
   context "Asserting on request content" do
 
     it "returns a 404 if the request body does not match the assertion" do
-      op.prime("user", { username: "Test" }.to_json, content_type: :json, requested_with: "haha")
+      op.prime("user", { username: "Test" }.to_json, content_type: "text/html", requested_with: "haha")
 
       response = ::Faraday.post('http://localhost:7003/get/user', "I am a body")
 
@@ -76,7 +82,7 @@ describe OptimusPrime do
     end
 
     it "returns a 200 if the request body does match the assertion" do
-      op.prime("user", { username: "Test" }.to_json, content_type: :json, requested_with: "I am a body")
+      op.prime("user", { username: "Test" }.to_json, content_type: :html, requested_with: "I am a body")
 
       response = ::Faraday.post('http://localhost:7003/get/user', "I am a body")
 
@@ -199,19 +205,19 @@ describe OptimusPrime do
 
     it "POST" do
       op.prime("kermit", { username: "Test" }.to_json, content_type: :json)
-      ::Faraday.post("http://localhost:7003/get/kermit", { username: "Test" })
+      ::Faraday.post("http://localhost:7003/get/kermit", { username: "Test" }.to_json)
       expect( op.last_request_for("kermit") ).to eq({ "method" => "POST", "body" => { "username" => "Test" }, "headers"=>{ "content_type"=>"application/x-www-form-urlencoded", "accept"=>["*/*"]} })
     end
 
     it "PUT" do
       op.prime("put/kermit", { username: "Test" }.to_json, content_type: :json)
-      ::Faraday.put("http://localhost:7003/get/put/kermit", { username: "Test" })
+      ::Faraday.put("http://localhost:7003/get/put/kermit", { username: "Test" }.to_json)
       expect( op.last_request_for("put/kermit") ).to eq({"method"=>"PUT", "body"=>{"username"=>"Test"}, "headers"=>{"content_type"=>"application/x-www-form-urlencoded", "accept"=>["*/*"]}})
     end
 
     it "returns a decoded body" do
       op.prime("kermit", { username: "Test" }.to_json, content_type: :json)
-      ::Faraday.post("http://localhost:7003/get/kermit", { word: "with spaces and other shit" })
+      ::Faraday.post("http://localhost:7003/get/kermit", { word: "with spaces and other shit" }.to_json)
       expect( op.last_request_for("kermit") ).to eq({"method"=>"POST", "body"=>{"word"=>"with spaces and other shit"}, "headers"=>{"content_type"=>"application/x-www-form-urlencoded", "accept"=>["*/*"]}})
     end
 
@@ -242,8 +248,8 @@ describe OptimusPrime do
       op = OptimusPrime::Base.new(wait_for: 1)
       op.prime("expectation", { status: "UNKOWN" }, content_type: :json)
 
-      ::Faraday.post("http://localhost:7003/get/expectation", { status: "IN_PROGRESS" } )
-      Thread.new { sleep(0.5); ::Faraday.post("http://localhost:7003/get/expectation", { status: "COMPLETED" } )}
+      ::Faraday.post("http://localhost:7003/get/expectation", { status: "IN_PROGRESS" }.to_json )
+      Thread.new { sleep(0.5); ::Faraday.post("http://localhost:7003/get/expectation", { status: "COMPLETED" }.to_json )}
 
       op.wait_until_request("expectation") do |request|
         expect(request["body"]["status"]).to eq("COMPLETED")

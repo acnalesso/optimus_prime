@@ -28,19 +28,19 @@ module OptimusPrime
         return 404
       end
 
+      body = parse_request(response[:content_type])
+
       if response[:requested_with]
-        request.body.rewind
-        return 404 unless eval("request.body.read.include?('#{response[:requested_with]}')")
+        return 404 unless body.include?(response[:requested_with])
       end
 
       sleep(response[:sleep].to_i) if response[:sleep]
 
       if response[:persisted]
-        new_body = request.body.read
-        @@responses[path][:body] = JSON.parse(response[:body]).merge!(JSON.parse(new_body)).to_json
+        @@responses[path][:body] = JSON.parse(response[:body]).merge!(body)
       end
 
-      record_request(path)
+      record_request(path, body)
       content_type(response[:content_type])
       status(response[:status_code] || 201)
       return "" if response[:status_code] =~ /500|404/
@@ -55,19 +55,19 @@ module OptimusPrime
         return 404
       end
 
+      body = parse_request(response[:content_type])
+
       if response[:requested_with]
-        request.body.rewind
-        return 404 unless eval("request.body.read.include?('#{response[:requested_with]}')")
+        return 404 unless body.include?(response[:requested_with])
       end
 
       sleep(response[:sleep].to_i) if response[:sleep]
 
       if response[:persisted]
-        new_body = request.body.read
-        @@responses[path][:body] = JSON.parse(response[:body]).merge!(JSON.parse(new_body)).to_json
+        @@responses[path][:body] = JSON.parse(response[:body]).merge!(body).to_json
       end
 
-      record_request(path)
+      record_request(path, body)
       content_type(response[:content_type])
       status(response[:status_code] || 201)
       return "" if response[:status_code] =~ /500|404/
@@ -82,39 +82,22 @@ module OptimusPrime
         return 404
       end
 
-      if response[:requested_with]
-        request.body.rewind
-        return 404 unless eval("request.body.read.include?('#{response[:requested_with]}')")
-      end
+      body = parse_request(response[:content_type])
 
+      if response[:requested_with]
+        return 404 unless body.include?(response[:requested_with])
+      end
 
       if response[:persisted]
-        new_body = params.tap { |p| p.delete("splat"); p.delete("captures") }
-        @@responses[path][:body] = new_body.to_json
+        @@responses[path][:body] = body
       end
 
-      record_request(path)
-
+      record_request(path, body)
       content_type(response[:content_type])
       status(response[:status_code])
-
       sleep(response[:sleep].to_i) if response[:sleep]
-
       return "" if response[:status_code] =~ /500|404/
       response[:body]
-    end
-
-    def record_request(path)
-      requests[path][:count] += 1
-      params.delete("splat")
-      params.delete("captures")
-      request_made = { method: self.env["REQUEST_METHOD"], body: params, headers: { content_type: request.content_type, accept: request.accept } }
-      requests[path][:last_request] = request_made
-    end
-
-    def get_path
-      # self.env["REQUEST_URI"].scan(/^\/get\/([\/\w+]+)(\/|\?|$)/).flatten[0]
-      self.env["REQUEST_URI"].sub(/\/get\/|\/requests\//, "")
     end
 
     get "/get/*" do
@@ -126,7 +109,7 @@ module OptimusPrime
         return 404
       end
 
-      record_request(path)
+      record_request(path, {})
 
       sleep(response[:sleep].to_f) if response[:sleep]
 
@@ -166,20 +149,42 @@ module OptimusPrime
       @@not_primed.to_json
     end
 
+    def record_request(path,  body)
+      requests[path][:count] += 1
+      request_made = { method: self.env["REQUEST_METHOD"], body: body, headers: { content_type: request.content_type, accept: request.accept } }
+      @@requests[path][:last_request] = request_made
+    end
+
+    def get_path
+      # self.env["REQUEST_URI"].scan(/^\/get\/([\/\w+]+)(\/|\?|$)/).flatten[0]
+      self.env["REQUEST_URI"].sub(/\/get\/|\/requests\//, "")
+    end
+
+
     private
 
-      def responses
-        @@responses
+    def parse_request(content_type)
+      if content_type.match(/json/)
+        request_body = request.body.read
+        request_body = request_body.empty? ? "{}" : request_body
+        request_body = JSON.parse(request_body)
+      else
+        request_body = request.body.read
       end
+      request.body.rewind
+      request_body
+    end
 
-      def requests
-        @@requests
-      end
+    def responses
+      @@responses
+    end
 
-      def get_boolean(boolean)
-        boolean == "true"
-      end
+    def requests
+      @@requests
+    end
 
+    def get_boolean(boolean)
+      boolean == "true"
+    end
   end
-
 end

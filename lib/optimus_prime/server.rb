@@ -5,10 +5,10 @@ require "json"
 module OptimusPrime
 
   class Server < ::Sinatra::Base
-    before do
-       content_type :json
+    after do
        headers 'Access-Control-Allow-Origin' => '*',
-                'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST']
+               'Access-Control-Allow-Headers' => env['HTTP_ACCESS_CONTROL_REQUEST_HEADERS'],
+               'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST', 'PATCH']
     end
 
     set :public_folder, __dir__ + "/server/public"
@@ -18,6 +18,9 @@ module OptimusPrime
     @@responses ||= {}
     @@requests ||= {}
     @@not_primed ||= {}
+
+    options "/*" do
+    end
 
     patch "/get/*" do
       path = get_path

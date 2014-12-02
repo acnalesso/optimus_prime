@@ -6,24 +6,59 @@
 !_TAG_PROGRAM_VERSION	5.8	//
 Base	lib/optimus_prime.rb	/^  class Base$/;"	c	class:OptimusPrime
 Cannon	lib/optimus_prime.rb	/^  class Cannon$/;"	c	class:OptimusPrime
+InMemoryStore	lib/optimus_prime/in_memory_store.rb	/^class InMemoryStore$/;"	c
+InMemoryStore	lib/optimus_prime/store.rb	/^class InMemoryStore$/;"	c
 OptimusPrime	lib/optimus_prime.rb	/^module OptimusPrime$/;"	m
 OptimusPrime	lib/optimus_prime/server.rb	/^module OptimusPrime$/;"	m
 OptimusPrime	lib/optimus_prime/version.rb	/^module OptimusPrime$/;"	m
+Prime	lib/optimus_prime/prime.rb	/^class Prime$/;"	c
+Request	lib/optimus_prime/request.rb	/^class Request$/;"	c
+Response	lib/optimus_prime/prime.rb	/^class Response$/;"	c
+Response	lib/optimus_prime/request.rb	/^class Response$/;"	c
 Server	lib/optimus_prime/server.rb	/^  class Server < ::Sinatra::Base$/;"	c	class:OptimusPrime
+[]	lib/optimus_prime/prime.rb	/^  def [](key)$/;"	f	class:Prime
+body_response	lib/optimus_prime/server.rb	/^    def body_response(prime)$/;"	f
 clear!	lib/optimus_prime.rb	/^    def clear!$/;"	f	class:OptimusPrime.Base
 count	lib/optimus_prime.rb	/^    def count(path_name)$/;"	f	class:OptimusPrime.Base
 current_path	lib/optimus_prime.rb	/^    def current_path; `pwd`.chomp; end$/;"	f	class:OptimusPrime.Cannon
+decode	lib/optimus_prime/in_memory_store.rb	/^  def decode(hash)$/;"	f	class:InMemoryStore
+decode	lib/optimus_prime/store.rb	/^  def decode(hash)$/;"	f	class:InMemoryStore
+encode	lib/optimus_prime/in_memory_store.rb	/^  def encode(request)$/;"	f	class:InMemoryStore
+encode	lib/optimus_prime/store.rb	/^  def encode(request)$/;"	f	class:InMemoryStore
 fire	lib/optimus_prime.rb	/^    def self.fire!(port)$/;"	F	class:OptimusPrime.Cannon
+get	lib/optimus_prime/in_memory_store.rb	/^  def get(key)$/;"	f	class:InMemoryStore
+get	lib/optimus_prime/store.rb	/^  def get(key)$/;"	f	class:InMemoryStore
 get_boolean	lib/optimus_prime/server.rb	/^    def get_boolean(boolean)$/;"	f
-get_path	lib/optimus_prime/server.rb	/^    def get_path$/;"	f
+has_requested_with?	lib/optimus_prime/prime.rb	/^  def has_requested_with?$/;"	f	class:Prime
 initialize	lib/optimus_prime.rb	/^    def initialize$/;"	f	class:OptimusPrime.Cannon
 initialize	lib/optimus_prime.rb	/^    def initialize(opts={})$/;"	f	class:OptimusPrime.Base
+initialize	lib/optimus_prime/in_memory_store.rb	/^  def initialize(client: {})$/;"	f	class:InMemoryStore
+initialize	lib/optimus_prime/prime.rb	/^  def initialize(params)$/;"	f	class:Prime
+initialize	lib/optimus_prime/prime.rb	/^  def initialize(request)$/;"	f	class:Response
+initialize	lib/optimus_prime/request.rb	/^  def initialize(params)$/;"	f	class:Request
+initialize	lib/optimus_prime/request.rb	/^  def initialize(request)$/;"	f	class:Response
+initialize	lib/optimus_prime/store.rb	/^  def initialize(client: {})$/;"	f	class:InMemoryStore
 last_request_for	lib/optimus_prime.rb	/^    def last_request_for(path_name)$/;"	f	class:OptimusPrime.Base
+merge	lib/optimus_prime/in_memory_store.rb	/^  def merge(key, request)$/;"	f	class:InMemoryStore
+merge	lib/optimus_prime/store.rb	/^  def merge(key, request)$/;"	f	class:InMemoryStore
+not_primed_store	lib/optimus_prime/server.rb	/^    def not_primed_store$/;"	f
 optimus_prime_path	lib/optimus_prime.rb	/^    def optimus_prime_path$/;"	f	class:OptimusPrime.Cannon
 parse_request	lib/optimus_prime/server.rb	/^    def parse_request(content_type)$/;"	f
+path	lib/optimus_prime/server.rb	/^    def path$/;"	f
+persisted?	lib/optimus_prime/prime.rb	/^  def persisted?$/;"	f	class:Prime
 prime	lib/optimus_prime.rb	/^    def prime(path_name, response="", options={})$/;"	f	class:OptimusPrime.Base
+prime_store	lib/optimus_prime/server.rb	/^    def prime_store$/;"	f
 record_request	lib/optimus_prime/server.rb	/^    def record_request(path,  body)$/;"	f
+requested_with?	lib/optimus_prime/prime.rb	/^  def requested_with?$/;"	f	class:Response
+requested_with?	lib/optimus_prime/request.rb	/^  def requested_with?$/;"	f	class:Response
 requests	lib/optimus_prime/server.rb	/^    def requests$/;"	f
 responses	lib/optimus_prime/server.rb	/^    def responses$/;"	f
+set	lib/optimus_prime/in_memory_store.rb	/^  def set(key, request)$/;"	f	class:InMemoryStore
+set	lib/optimus_prime/store.rb	/^  def set(key, request)$/;"	f	class:InMemoryStore
+set_http_headers	lib/optimus_prime/server.rb	/^    def set_http_headers(prime)$/;"	f
 start_server	lib/optimus_prime.rb	/^    def start_server$/;"	f	class:OptimusPrime.Cannon
+to_hash	lib/optimus_prime/prime.rb	/^  def to_hash$/;"	f	class:Prime
+to_hash	lib/optimus_prime/request.rb	/^  def to_hash$/;"	f	class:Request
+update_prime	lib/optimus_prime/server.rb	/^    def update_prime(prime, content_body)$/;"	f
 wait_until_request	lib/optimus_prime.rb	/^    def wait_until_request(path_name, &block)$/;"	f	class:OptimusPrime.Base
+with_valid_prime	lib/optimus_prime/server.rb	/^    def with_valid_prime(path, prime)$/;"	f

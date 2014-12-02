@@ -23,8 +23,7 @@ module OptimusPrime
     end
 
     patch "/get/*" do
-      path = get_path
-      response = responses[path]
+      response = prime_store.get(path)
 
       if response.nil?
         @@not_primed[path] = { time: Time.now.to_s, HTTP_METHOD: env["REQUEST_METHOD"] }
@@ -40,7 +39,8 @@ module OptimusPrime
       sleep(response[:sleep].to_i) if response[:sleep]
 
       if response[:persisted]
-        @@responses[path][:body] = JSON.parse(response[:body]).merge!(body)
+        response[:body] = JSON.parse(response[:body]).merge!(body).to_json
+        prime_store.set(path, response);
       end
 
       record_request(path, body)
@@ -50,8 +50,7 @@ module OptimusPrime
     end
 
     put "/get/*" do
-      path = get_path
-      response = responses[path]
+      response = prime_store.get(path)
 
       if response.nil?
         @@not_primed[path] = { time: Time.now.to_s, HTTP_METHOD: env["REQUEST_METHOD"] }
@@ -67,7 +66,8 @@ module OptimusPrime
       sleep(response[:sleep].to_i) if response[:sleep]
 
       if response[:persisted]
-        @@responses[path][:body] = JSON.parse(response[:body]).merge!(body).to_json
+        response[:body] = JSON.parse(response[:body]).merge!(body).to_json
+        prime_store.set(path, response);
       end
 
       record_request(path, body)
@@ -77,35 +77,53 @@ module OptimusPrime
     end
 
     post "/get/*" do
-      path = get_path
-      response = responses[path]
+      prime = prime_store.get(path)
+      with_valid_prime(path, prime) do
+        set_http_headers(prime)
+        body_response(prime)
+      end
+    end
 
-      if response.nil?
-        @@not_primed[path] = { time: Time.now.to_s, HTTP_METHOD: env["REQUEST_METHOD"] }
+    def set_http_headers(prime)
+      content_type(prime.content_type)
+      status(prime.status_code)
+    end
+
+    def body_response(prime)
+      sleep(prime.sleep.to_i) if prime.sleep
+      [500, 404].include?(prime.status_code.to_i) ? "" : prime.body
+    end
+
+    def update_prime(prime, content_body)
+      prime.body = JSON.parse(prime.body).merge!(content_body).to_json
+      prime_store.set(path, prime)
+    end
+
+    def with_valid_prime(path, prime)
+      unless prime
+        not_primed_store.set(path, time: Time.now.to_s, HTTP_METHOD: env["REQUEST_METHOD"] )
         return 404
       end
 
-      body = parse_request(response[:content_type])
-
-      if response[:requested_with]
-        return 404 unless body.include?(response[:requested_with])
+      if prime.has_requested_with?
+        request_body = request.body.read.tap { request.body.rewind }
+        return 404 unless request_body.include?(prime.requested_with)
       end
 
-      if response[:persisted]
-        @@responses[path][:body] = body
-      end
+      request_body = parse_request(prime.content_type)
 
-      record_request(path, body)
-      content_type(response[:content_type])
-      status(response[:status_code])
-      sleep(response[:sleep].to_i) if response[:sleep]
-      return "" if response[:status_code] =~ /500|404/
-      response[:body]
+      update_prime(prime, request_body) if prime.persisted?
+
+      # @todo not sure what this is about
+      record_request(path, request_body)
+
+      yield request_body if block_given?
     end
 
     get "/get/*" do
-      path = get_path
-      response = responses[path]
+      response = prime_store.get(path)
+      require 'pry'
+      binding.pry
 
       if response.nil?
         @@not_primed[path] = { time: Time.now.to_s, HTTP_METHOD: env["REQUEST_METHOD"] }
@@ -124,9 +142,19 @@ module OptimusPrime
 
     post "/prime" do
       path = params["path_name"]
-      responses[path] = { content_type: (params["content_type"] || :html), body: params["response"], status_code: (params["status_code"] || 200), requested_with: (params["requested_with"] || false), sleep: (params["sleep"] || false), persisted: (params["persisted"] || false) }
+      require 'pry'
+      binding.pry
+      prime_store.set(path, Prime.new(params))
       requests[path] = { count: 0, last_request: nil }
       201
+    end
+
+    def prime_store
+      @@prime_store ||= InMemoryStore.new
+    end
+
+    def not_primed_store
+      @@not_primed_store ||= InMemoryStore.new
     end
 
     get "/show" do
@@ -139,7 +167,6 @@ module OptimusPrime
     end
 
     get "/requests/*" do
-      path = get_path
       requests[path].to_json
     end
 
@@ -158,9 +185,9 @@ module OptimusPrime
       @@requests[path][:last_request] = request_made
     end
 
-    def get_path
+    def path
       # self.env["REQUEST_URI"].scan(/^\/get\/([\/\w+]+)(\/|\?|$)/).flatten[0]
-      self.env["REQUEST_URI"].sub(/\/get\/|\/requests\//, "")
+      @path ||= self.env["REQUEST_URI"].sub(/\/get\/|\/requests\//, "")
     end
 
 
@@ -179,7 +206,8 @@ module OptimusPrime
     end
 
     def responses
-      @@responses
+      store
+      # @@responses
     end
 
     def requests

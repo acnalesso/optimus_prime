@@ -1,4 +1,6 @@
 require "optimus_prime/version"
+require "optimus_prime/in_memory_store"
+require "optimus_prime/prime"
 require "optimus_prime/server"
 
 module OptimusPrime

@@ -200,32 +200,32 @@ describe OptimusPrime do
     it "GET" do
       op.prime("continue", { username: "Test" }.to_json, content_type: :json)
       ::Faraday.get("http://localhost:7003/get/continue", nil, { "Content-Type" => "application/json", "Accept" => "application/json" })
-      expect( op.last_request_for("continue") ).to eq({ "method" => "GET", "body" => {}, "headers" => { "content_type" => "application/json", "accept" => ["application/json"] } })
+      expect( op.last_request_for("continue") ).to eq({ "method" => "GET", "body" => {}, "headers" => { "content_type" => "application/json", "accept" => ["application/json"], "cookies" => {} } })
     end
 
     it "POST" do
       op.prime("kermit", { username: "Test" }.to_json, content_type: :json)
       ::Faraday.post("http://localhost:7003/get/kermit", { username: "Test" }.to_json)
-      expect( op.last_request_for("kermit") ).to eq({ "method" => "POST", "body" => { "username" => "Test" }, "headers"=>{ "content_type"=>"application/x-www-form-urlencoded", "accept"=>["*/*"]} })
+      expect( op.last_request_for("kermit") ).to eq({ "method" => "POST", "body" => { "username" => "Test" }, "headers"=>{ "content_type"=>"application/x-www-form-urlencoded", "accept"=>["*/*"], "cookies" => {}} })
     end
 
     it "PUT" do
       op.prime("put/kermit", { username: "Test" }.to_json, content_type: :json)
       ::Faraday.put("http://localhost:7003/get/put/kermit", { username: "Test" }.to_json)
-      expect( op.last_request_for("put/kermit") ).to eq({"method"=>"PUT", "body"=>{"username"=>"Test"}, "headers"=>{"content_type"=>"application/x-www-form-urlencoded", "accept"=>["*/*"]}})
+      expect( op.last_request_for("put/kermit") ).to eq({"method"=>"PUT", "body"=>{"username"=>"Test"}, "headers"=>{"content_type"=>"application/x-www-form-urlencoded", "accept"=>["*/*"], "cookies" => {} }})
     end
 
     it "returns a decoded body" do
       op.prime("kermit", { username: "Test" }.to_json, content_type: :json)
       ::Faraday.post("http://localhost:7003/get/kermit", { word: "with spaces and other shit" }.to_json)
-      expect( op.last_request_for("kermit") ).to eq({"method"=>"POST", "body"=>{"word"=>"with spaces and other shit"}, "headers"=>{"content_type"=>"application/x-www-form-urlencoded", "accept"=>["*/*"]}})
+      expect( op.last_request_for("kermit") ).to eq({"method"=>"POST", "body"=>{"word"=>"with spaces and other shit"}, "headers"=>{"content_type"=>"application/x-www-form-urlencoded", "accept"=>["*/*"], "cookies" => {} }})
     end
 
     it "tries for up to 0.1 seconds to get the last request" do
       op = OptimusPrime::Base.new(wait_for: 0.1)
       op.prime("waitMan", { status: "waiting" }.to_json, content_type: :json)
       Thread.new { sleep(0.01); ::Faraday.get("http://localhost:7003/get/waitMan", nil, { "Content-Type" => "application/json", "Accept" => "application/json" })}
-      expect( op.last_request_for("waitMan") ).to eq({ "method" => "GET", "body" => {}, "headers" => { "content_type" => "application/json", "accept" => ["application/json"] } })
+      expect( op.last_request_for("waitMan") ).to eq({ "method" => "GET", "body" => {}, "headers" => { "content_type" => "application/json", "accept" => ["application/json"], "cookies" => {} } })
     end
 
     it "returns the last request as nil if it doesn't find a request after 0.1 seconds" do

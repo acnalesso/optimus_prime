@@ -12539,3 +12539,298 @@ JSON::ParserError - 757: unexpected token at 'status=YES':
 	/Users/mars/.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `eval'
 	/Users/mars/.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `<main>'
 Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.3 codename Protein Powder)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.3 codename Protein Powder)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.3 codename Protein Powder)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.3 codename Protein Powder)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+JSON::ParserError - 757: unexpected token at 'status=YES':
+	/Users/saturn/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/json/common.rb:155:in `parse'
+	/Users/saturn/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/json/common.rb:155:in `parse'
+	/Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb:173:in `parse_request'
+	/Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb:88:in `block in <class:Server>'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1603:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1603:in `block in compile!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:966:in `[]'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:966:in `block (3 levels) in route!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:985:in `route_eval'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:966:in `block (2 levels) in route!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1006:in `block in process_route'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1004:in `catch'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1004:in `process_route'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:964:in `block in route!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:963:in `each'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:963:in `route!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1076:in `block in dispatch!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `block in invoke'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `catch'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `invoke'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1073:in `dispatch!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:898:in `block in call!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `block in invoke'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `catch'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `invoke'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:898:in `call!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:886:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/nulllogger.rb:9:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:180:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:2014:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1478:in `block in call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1788:in `synchronize'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1478:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:86:in `block in pre_process'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:84:in `catch'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:84:in `pre_process'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:53:in `process'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:39:in `receive_data'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/backends/base.rb:73:in `start'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/server.rb:162:in `start'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/controllers/controller.rb:87:in `start'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/runner.rb:200:in `run_command'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/runner.rb:156:in `run!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/bin/thin:6:in `<top (required)>'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/bin/thin:23:in `load'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/bin/thin:23:in `<main>'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `eval'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `<main>'
+Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.3 codename Protein Powder)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+JSON::ParserError - 757: unexpected token at 'status=YES':
+	/Users/saturn/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/json/common.rb:155:in `parse'
+	/Users/saturn/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/json/common.rb:155:in `parse'
+	/Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb:173:in `parse_request'
+	/Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb:88:in `block in <class:Server>'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1603:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1603:in `block in compile!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:966:in `[]'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:966:in `block (3 levels) in route!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:985:in `route_eval'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:966:in `block (2 levels) in route!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1006:in `block in process_route'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1004:in `catch'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1004:in `process_route'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:964:in `block in route!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:963:in `each'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:963:in `route!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1076:in `block in dispatch!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `block in invoke'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `catch'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `invoke'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1073:in `dispatch!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:898:in `block in call!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `block in invoke'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `catch'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `invoke'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:898:in `call!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:886:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/nulllogger.rb:9:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:180:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:2014:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1478:in `block in call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1788:in `synchronize'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1478:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:86:in `block in pre_process'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:84:in `catch'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:84:in `pre_process'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:53:in `process'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:39:in `receive_data'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/backends/base.rb:73:in `start'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/server.rb:162:in `start'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/controllers/controller.rb:87:in `start'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/runner.rb:200:in `run_command'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/runner.rb:156:in `run!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/bin/thin:6:in `<top (required)>'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/bin/thin:23:in `load'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/bin/thin:23:in `<main>'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `eval'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `<main>'
+Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.3 codename Protein Powder)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.3 codename Protein Powder)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.3 codename Protein Powder)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+JSON::ParserError - 757: unexpected token at 'status=YES':
+	/Users/saturn/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/json/common.rb:155:in `parse'
+	/Users/saturn/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/json/common.rb:155:in `parse'
+	/Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb:173:in `parse_request'
+	/Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb:88:in `block in <class:Server>'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1603:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1603:in `block in compile!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:966:in `[]'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:966:in `block (3 levels) in route!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:985:in `route_eval'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:966:in `block (2 levels) in route!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1006:in `block in process_route'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1004:in `catch'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1004:in `process_route'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:964:in `block in route!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:963:in `each'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:963:in `route!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1076:in `block in dispatch!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `block in invoke'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `catch'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `invoke'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1073:in `dispatch!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:898:in `block in call!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `block in invoke'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `catch'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `invoke'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:898:in `call!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:886:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/nulllogger.rb:9:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:180:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:2014:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1478:in `block in call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1788:in `synchronize'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1478:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:86:in `block in pre_process'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:84:in `catch'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:84:in `pre_process'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:53:in `process'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:39:in `receive_data'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/backends/base.rb:73:in `start'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/server.rb:162:in `start'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/controllers/controller.rb:87:in `start'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/runner.rb:200:in `run_command'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/runner.rb:156:in `run!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/bin/thin:6:in `<top (required)>'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/bin/thin:23:in `load'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/bin/thin:23:in `<main>'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `eval'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `<main>'
+Exiting!
+Writing PID to /Users/saturn/dev/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.3 codename Protein Powder)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+JSON::ParserError - 757: unexpected token at 'status=YES':
+	/Users/saturn/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/json/common.rb:155:in `parse'
+	/Users/saturn/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/json/common.rb:155:in `parse'
+	/Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb:173:in `parse_request'
+	/Users/saturn/dev/optimus_prime/lib/optimus_prime/server.rb:88:in `block in <class:Server>'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1603:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1603:in `block in compile!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:966:in `[]'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:966:in `block (3 levels) in route!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:985:in `route_eval'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:966:in `block (2 levels) in route!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1006:in `block in process_route'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1004:in `catch'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1004:in `process_route'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:964:in `block in route!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:963:in `each'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:963:in `route!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1076:in `block in dispatch!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `block in invoke'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `catch'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `invoke'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1073:in `dispatch!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:898:in `block in call!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `block in invoke'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `catch'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1058:in `invoke'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:898:in `call!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:886:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/nulllogger.rb:9:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:180:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:2014:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1478:in `block in call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1788:in `synchronize'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1478:in `call'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:86:in `block in pre_process'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:84:in `catch'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:84:in `pre_process'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:53:in `process'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/connection.rb:39:in `receive_data'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/backends/base.rb:73:in `start'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/server.rb:162:in `start'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/controllers/controller.rb:87:in `start'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/runner.rb:200:in `run_command'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/lib/thin/runner.rb:156:in `run!'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/gems/thin-1.6.3/bin/thin:6:in `<top (required)>'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/bin/thin:23:in `load'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/bin/thin:23:in `<main>'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `eval'
+	/Users/saturn/.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `<main>'
+Exiting!

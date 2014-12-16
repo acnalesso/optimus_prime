@@ -156,8 +156,9 @@ module OptimusPrime
       requests[path][:count] += 1
       cookies = request.cookies
       cookies.merge!(CGI::Cookie::parse(env["HTTP_X_COOKIES"]))
+      custom_params = env["HTTP_X_PARAMS"]
 
-      request_made = { method: self.env["REQUEST_METHOD"], body: body, headers: { content_type: request.content_type, accept: request.accept, cookies: cookies } }
+      request_made = { method: self.env["REQUEST_METHOD"], body: body, headers: { content_type: request.content_type, accept: request.accept, cookies: cookies, custom_params: custom_params } }
       @@requests[path][:last_request] = request_made
     end
 

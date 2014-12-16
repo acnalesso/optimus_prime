@@ -14,6 +14,15 @@ describe OptimusPrime do
     expect( op.prime("test").status ).to eq 201
   end
 
+  it "records the custom X-Cookies header" do
+    op.prime('custom-x-header', '{}', content_type: :json)
+
+    ::Faraday.new("http://localhost:7003").tap {|c| c.headers = { "X-Cookies" => "myCookie=true;" } }.get('/get/custom-x-header')
+    response = op.last_request_for('custom-x-header')
+
+    expect(response["headers"]["cookies"]["myCookie"][0]).to eq("true")
+  end
+
   it "primes an endpoint with attributes" do
     op.prime("test", "I am a response", content_type: "text/html")
 

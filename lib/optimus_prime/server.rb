@@ -7,7 +7,7 @@ module OptimusPrime
   class Server < ::Sinatra::Base
     after do
        headers 'Access-Control-Allow-Origin' => '*',
-               'Access-Control-Allow-Headers' => env['HTTP_ACCESS_CONTROL_REQUEST_HEADERS'],
+               'Access-Control-Allow-Headers' => String(env['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']),
                'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST', 'PATCH']
     end
 
@@ -31,6 +31,8 @@ module OptimusPrime
         return 404
       end
 
+      return response[:status_code] if response[:status_code].to_s =~ /500|404/
+
       body = parse_request(response[:content_type])
 
       if response[:requested_with]
@@ -46,7 +48,6 @@ module OptimusPrime
       record_request(path, body)
       content_type(response[:content_type])
       status(response[:status_code] || 201)
-      return "" if response[:status_code] =~ /500|404/
     end
 
     put "/get/*" do
@@ -57,6 +58,8 @@ module OptimusPrime
         @@not_primed[path] = { time: Time.now.to_s, HTTP_METHOD: env["REQUEST_METHOD"] }
         return 404
       end
+
+      return response[:status_code] if response[:status_code].to_s =~ /500|404/
 
       body = parse_request(response[:content_type])
 
@@ -73,7 +76,6 @@ module OptimusPrime
       record_request(path, body)
       content_type(response[:content_type])
       status(response[:status_code] || 201)
-      return "" if response[:status_code] =~ /500|404/
     end
 
     post "/get/*" do
@@ -87,6 +89,8 @@ module OptimusPrime
 
       body = parse_request(response[:content_type])
 
+      return response[:status_code] if response[:status_code].to_s =~ /500|404/
+
       if response[:requested_with]
         return 404 unless body.include?(response[:requested_with])
       end
@@ -99,7 +103,6 @@ module OptimusPrime
       content_type(response[:content_type])
       status(response[:status_code])
       sleep(response[:sleep].to_i) if response[:sleep]
-      return "" if response[:status_code] =~ /500|404/
       response[:body]
     end
 
@@ -112,17 +115,21 @@ module OptimusPrime
         return 404
       end
 
+      return response[:status_code] if response[:status_code].to_s =~ /500|404/
+
       record_request(path, {})
 
       sleep(response[:sleep].to_f) if response[:sleep]
 
       content_type(response[:content_type])
       status(response[:status_code])
-      return "" if response[:status_code] =~ /500|404/
       response[:body]
     end
 
     post "/prime" do
+      payload = env['rack.input'].read.tap { env['rack.input'].rewind }
+      params = JSON(payload.empty? ? '{}' : payload)
+
       path = params["path_name"]
       responses[path] = { content_type: (params["content_type"] || :html), body: params["response"], status_code: (params["status_code"] || 200), requested_with: (params["requested_with"] || false), sleep: (params["sleep"] || false), persisted: (params["persisted"] || false) }
       requests[path] = { count: 0, last_request: nil }

@@ -59,7 +59,14 @@ module OptimusPrime
     end
 
     def prime(path_name, response="", options={})
-      ::Faraday.post("http://localhost:#{op_port}/prime", { path_name: path_name, response: response }.merge!(options))
+      connection = ::Faraday.new("http://localhost:#{op_port}")
+      connection.post do |request|
+        request.url('/prime')
+        request.headers['Accept'] = 'application/json'
+        request.headers['Content-Type'] = 'application/json'
+        # request.headers['Access-Control-Allow-Meth'] = 'post'
+        request.body = ({ path_name: path_name, response: response }.merge!(options)).to_json
+      end
     end
 
     def clear!

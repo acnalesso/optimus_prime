@@ -141,6 +141,27 @@ module OptimusPrime
       responses.to_json
     end
 
+    get "/add" do
+      erb :add
+    end
+
+    post "/add" do
+      body = params[:body]
+      path = params[:path]
+      content_type = params[:content_type]
+      responses[path] = { content_type: (content_type || :html), body: body, status_code: 200, requested_with: false, sleep: false, persisted: false }
+      requests[path] = { count: 0, last_request: nil }
+      <<-HTML
+        <h1>Done!</h1>
+        <br>
+        <a href='/add'>Back</a>
+        <br>
+        <a href='/get/#{path}'>View primed response</a>
+        <br>
+        <a href='/show'>View all</a>
+      HTML
+    end
+
     get "/clear" do
       @@responses = {}
     end

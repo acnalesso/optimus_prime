@@ -162,6 +162,12 @@ module OptimusPrime
       HTML
     end
 
+    get "/clearAll/*" do
+      @@responses = {}
+      @@requests = {}
+      @@not_primed = {}
+    end
+
     get "/clear" do
       @@responses = {}
     end

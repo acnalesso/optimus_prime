@@ -162,7 +162,7 @@ module OptimusPrime
       HTML
     end
 
-    get "/clearAll/*" do
+    get "/purge" do
       @@responses = {}
       @@requests = {}
       @@not_primed = {}

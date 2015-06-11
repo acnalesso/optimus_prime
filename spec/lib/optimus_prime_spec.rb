@@ -14,6 +14,14 @@ describe OptimusPrime do
     expect( op.prime("test").status ).to eq 201
   end
 
+  it "converts response payload, body, to string if it is not" do
+    op.prime('not-a-string', { string: false }, content_type: :json)
+
+    response = ::Faraday.new("http://localhost:7003").get('/get/not-a-string').body
+
+    expect(response).to eq('{"string":false}')
+  end
+
   it "records the custom X-Params header" do
     op.prime('custom-x-params', '{}', content_type: :json)
 

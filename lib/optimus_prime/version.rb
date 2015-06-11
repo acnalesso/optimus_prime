@@ -1,3 +1,3 @@
 module OptimusPrime
-  VERSION = "4.5.0"
+  VERSION = "4.6.0"
 end

@@ -24,6 +24,8 @@ to it and get the desired response.
 ## Default configuration
   * localhost:7003 -> TEST default endpoint
   * returns 200 status code for GET,POST
+  * Runs on a single thread
+  * If multi_threaded is true the default thread pool size is 16
   * sets content-type to text
   * wait_for is 3 seconds
   * Returns empty body when status_code is 404/500
@@ -36,6 +38,17 @@ to it and get the desired response.
 # Usage
 ```ruby
 OptimusPrime::Cannon.fire!(7002)
+op = OptimusPrime::Base.new
+op.prime("path_name", response, options)
+```
+
+multi threaded mode
+```ruby
+#
+# OptimusPrime::Cannon.fire!(7002, {multi_threaded: true, thread_pool: 50})
+# thread_pool is by default set to 16
+#
+OptimusPrime::Cannon.fire!(7002, {multi_threaded: true})
 op = OptimusPrime::Base.new
 op.prime("path_name", response, options)
 ```

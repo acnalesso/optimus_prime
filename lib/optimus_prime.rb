@@ -8,14 +8,15 @@ module OptimusPrime
 
     $port = 7002
 
-    def self.fire!(port)
+    def self.fire!(port, options={})
       $port = port
-      self.new.start_server
+      self.new(options).start_server
     end
 
     attr_reader :op_port
 
-    def initialize
+    def initialize(options={})
+      @options = options
       @op_port = $port
     end
 
@@ -23,7 +24,7 @@ module OptimusPrime
 
       return system("echo '\nOptimus is already priming :)\n\n'") if File.exist?("#{current_path}/tmp/pids/optimus_prime.pid")
 
-      unless   File.directory?("#{current_path}/tmp/pids")
+      unless File.directory?("#{current_path}/tmp/pids")
         system("echo 'Creating tmp/pid' && mkdir -p #{current_path}/tmp/pids")
       end
 
@@ -33,7 +34,11 @@ module OptimusPrime
         end
 
         system("echo '\nStarting Optimus Prime\n'")
-        puts system("thin start -c #{optimus_prime_path} -p #{op_port} -P #{current_path}/tmp/pids/optimus_prime.pid -l #{current_path}/optimus_prime.log -D -d")
+        if @options[:multi_threaded]
+          puts system("thin start -c #{optimus_prime_path} -p #{op_port} -P #{current_path}/tmp/pids/optimus_prime.pid -l #{current_path}/optimus_prime.log --threaded -p 7011 --threadpool-size #{@options[:thread_pool] || 16} -d")
+        else
+          puts system("thin start -c #{optimus_prime_path} -p #{op_port} -P #{current_path}/tmp/pids/optimus_prime.pid -l #{current_path}/optimus_prime.log -D -d")
+        end
 
         while :starting_server
           sleep(2) and break if File.exist?("#{current_path}/tmp/pids/optimus_prime.pid")

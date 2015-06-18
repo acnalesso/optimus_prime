@@ -17818,3 +17818,10 @@ JSON::ParserError - 757: unexpected token at 'status=YES':
 	/Users/acnalesso/.rvm/gems/ruby-2.1.3/bin/ruby_executable_hooks:15:in `eval'
 	/Users/acnalesso/.rvm/gems/ruby-2.1.3/bin/ruby_executable_hooks:15:in `<main>'
 Exiting!
+Writing PID to /Users/acnalesso/dev/shop/optimus_prime/tmp/pids/optimus_prime.pid
+Using rack adapter
+Thin web server (v1.6.3 codename Protein Powder)
+Debugging ON
+Maximum connections set to 1024
+Listening on 0.0.0.0:7003, CTRL+C to stop
+Exiting!

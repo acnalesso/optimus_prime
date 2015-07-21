@@ -5,4 +5,4 @@ gemspec
 
 gem "sinatra"
 gem "pry"
-gem "puma"
+gem "thin"

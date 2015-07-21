@@ -107,6 +107,8 @@ module OptimusPrime
     end
 
     get "/get/*" do
+
+      sleep 15
       path = get_path
       response = responses[path]
 

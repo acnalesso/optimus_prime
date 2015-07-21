@@ -1,0 +1,2 @@
+#!/bin/bash
+ENV=$ENV thin start -R config.ru -p $VCAP_APP_PORT --threaded --threadpool-size 16 -e $ENV

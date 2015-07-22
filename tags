@@ -5,6 +5,7 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 OptimusPrime	lib/optimus_prime/version.rb	/^module OptimusPrime$/;"	m
-grep	optimus_prime.gemspec	/^  spec.test_files    = spec.files.grep(%r{^(test|s/
-split	optimus_prime.gemspec	/^  spec.files         = `git ls-files -z`.split("\\/
-unshift	optimus_prime.gemspec	/^$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?/
+JSON	lib/optimus_prime/server.rb	/^      params = JSON(payload.empty? ? '{}' : payloa/
+parse_request	lib/optimus_prime/server.rb	/^      body = parse_request(response[:content_type]/
+record_request	lib/optimus_prime/server.rb	/^      record_request(path, {})$/
+sub	lib/optimus_prime/server.rb	/^      self.env["REQUEST_URI"].sub(\/\\\/get\\\/|\\/

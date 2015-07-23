@@ -192,8 +192,9 @@ module OptimusPrime
     end
 
     get "/wait/:ttw" do
-      sleep(params["ttw"])
-      "has waited for #{params["ttw"]}"
+      ttw = params["ttw"].to_i
+      sleep(ttw)
+      ttw.to_s
     end
 
     def record_request(path,  body)

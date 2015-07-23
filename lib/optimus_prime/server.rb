@@ -191,6 +191,11 @@ module OptimusPrime
       @@not_primed.to_json
     end
 
+    get "/wait/:ttw" do
+      sleep(params["ttw"])
+      "has waited for #{params["ttw"]}"
+    end
+
     def record_request(path,  body)
       requests[path][:count] += 1
       cookies = request.cookies

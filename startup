@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo "Starting optimus prime"
 echo $ENV
 echo $VCAP_APP_PORT

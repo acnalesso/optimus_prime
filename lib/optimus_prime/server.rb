@@ -153,8 +153,9 @@ module OptimusPrime
     post "/add" do
       body = params[:body]
       path = params[:path]
+      status = params[:status] || 200
       content_type = params[:content_type]
-      responses[path] = { content_type: (content_type || :html), body: body, status_code: 200, requested_with: false, sleep: false, persisted: false }
+      responses[path] = { content_type: (content_type || :html), body: body, status_code: status, requested_with: false, sleep: false, persisted: false }
       requests[path] = { count: 0, last_request: nil }
       <<-HTML
         <h1>Done!</h1>
@@ -189,12 +190,6 @@ module OptimusPrime
     get "/not-primed" do
       content_type :json
       @@not_primed.to_json
-    end
-
-    get "/wait/:ttw" do
-      ttw = params["ttw"].to_i
-      sleep(ttw)
-      ttw.to_s
     end
 
     def record_request(path,  body)

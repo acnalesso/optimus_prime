@@ -3,11 +3,13 @@ applications:
   ".":
     name: optimus-prime
     framework:
-      name: sinatra
+      name: standalone
       info:
-        mem: 128M
-        description: Sinatra Application
+        mem: 64M
+        description: Standalone Application
         exec: 
-    url: "${name}.${target-base}"
+    runtime: ruby21
+    command: bash start.sh
+    url: optimus-prime.nimbus-03.cg.bskyb.com
     mem: '512'
-    instances: 2
+    instances: 1

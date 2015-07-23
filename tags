@@ -5,8 +5,3 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 OptimusPrime	lib/optimus_prime/version.rb	/^module OptimusPrime$/;"	m
-JSON	lib/optimus_prime/server.rb	/^      params = JSON(payload.empty? ? '{}' : payloa/
-parse_request	lib/optimus_prime/server.rb	/^      body = parse_request(response[:content_type]/
-record_request	lib/optimus_prime/server.rb	/^      record_request(path, {})$/
-sleep	lib/optimus_prime/server.rb	/^      sleep(ttw)$/
-sub	lib/optimus_prime/server.rb	/^      self.env["REQUEST_URI"].sub(\/\\\/get\\\/|\\/

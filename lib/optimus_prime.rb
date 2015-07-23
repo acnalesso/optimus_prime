@@ -3,6 +3,22 @@ require "optimus_prime/server"
 
 module OptimusPrime
 
+  class Wait
+    def initialize(app)
+      @app = app
+    end
+
+    def call(env)
+
+      if match = env["PATH_INFO"].match(/\/wait\/(\d+)/)
+        ttw = match.string.split("/").last.to_i
+        sleep(ttw)
+        return [200, {}, ["Inactive for: #{ttw}"]]
+      end
+
+      @app.call(env)
+    end
+  end
 
   class Cannon
 

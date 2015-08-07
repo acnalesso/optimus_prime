@@ -3,6 +3,39 @@ require "optimus_prime/server"
 
 module OptimusPrime
 
+  class NormaliseUniqueURL
+    def initialize(app)
+      @app = app
+    end
+
+    def call(env)
+
+      if match = env["QUERY_STRING"].match(/_OpID=(\d){13}-(\d){5}(.*)?/)
+
+        if path_to_be_prepended = match[match.size - 1]
+          timestamps = env["QUERY_STRING"].match(/[_OpID=](\d){13}-(\d){5}/)
+
+          path_to_be_prepended.insert(0, '/') unless path_to_be_prepended.start_with?('/')
+
+          env["PATH_INFO"] =  env["PATH_INFO"] << path_to_be_prepended
+          env["REQUEST_PATH"] = env["PATH_INFO"].clone
+          env["QUERY_STRING"] = "_OpID#{timestamps}"
+          env["REQUEST_URI"] = "#{env["PATH_INFO"]}?#{env["QUERY_STRING"]}"
+        end
+      end
+
+
+      require 'pry'
+      binding.pry
+
+
+      puts env["PATH_INFO"]
+
+      @app.call(env)
+    end
+
+  end
+
   class Wait
     def initialize(app)
       @app = app

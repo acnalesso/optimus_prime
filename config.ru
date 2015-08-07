@@ -3,4 +3,5 @@ require "lib/optimus_prime"
 
 puts "Running config.ru now"
 use OptimusPrime::Wait
+use OptimusPrime::NormaliseUniqueURL
 run OptimusPrime::Server

@@ -12,7 +12,8 @@ module OptimusPrime
 
       if match = env["QUERY_STRING"].match(/_OpID=(\d){13}-(\d){5}(.*)?/)
 
-        if path_to_be_prepended = match[match.size - 1]
+        path_to_be_prepended = match[match.size - 1]
+        if path_to_be_prepended != "" && path_to_be_prepended != nil
           timestamps = env["QUERY_STRING"].match(/[_OpID=](\d){13}-(\d){5}/)
 
           path_to_be_prepended.insert(0, '/') unless path_to_be_prepended.start_with?('/')

@@ -24,13 +24,6 @@ module OptimusPrime
         end
       end
 
-
-      require 'pry'
-      binding.pry
-
-
-      puts env["PATH_INFO"]
-
       @app.call(env)
     end
 

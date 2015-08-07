@@ -5,3 +5,4 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 OptimusPrime	lib/optimus_prime/version.rb	/^module OptimusPrime$/;"	m
+call	lib/optimus_prime.rb	/^    def call(env)$/

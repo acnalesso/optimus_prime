@@ -10,7 +10,7 @@ module OptimusPrime
 
     def call(env)
 
-      if match = env["QUERY_STRING"].match(/_OpID=(\d){13}-(\d){5}(.*)?/)
+      if match = env["QUERY_STRING"].match(/_OpID=(\d)+-(\d)+(.*)?/)
 
         path_to_be_prepended = match[match.size - 1]
         if path_to_be_prepended != "" && path_to_be_prepended != nil

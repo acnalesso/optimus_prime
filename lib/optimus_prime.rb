@@ -10,13 +10,14 @@ module OptimusPrime
 
     def call(env)
 
-      if match = env["QUERY_STRING"].match(/_OpID=(\d)+-(\d)+(.*)?/)
+      match = env["QUERY_STRING"].match(/_OpID=(\d)+-(\d)+(.*)?/)
+      if match && match[match.size - 1] != ""
 
         path_to_be_prepended = match[match.size - 1]
         if path_to_be_prepended != "" && path_to_be_prepended != nil
-          timestamps = env["QUERY_STRING"].match(/[_OpID=](\d){13}-(\d){5}/)
+          timestamps = env["QUERY_STRING"].match(/[_OpID=](\d)+-(\d)+/)
 
-          path_to_be_prepended.insert(0, '/') unless path_to_be_prepended.start_with?('/')
+          path_to_be_prepended.insert(0, '/') unless path_to_be_prepended.start_with?('/') || env["PATH_INFO"].start_with?('/')
 
           env["PATH_INFO"] =  env["PATH_INFO"] << path_to_be_prepended
           env["REQUEST_PATH"] = env["PATH_INFO"].clone

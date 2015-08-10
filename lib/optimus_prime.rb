@@ -17,7 +17,9 @@ module OptimusPrime
         if path_to_be_prepended != "" && path_to_be_prepended != nil
           timestamps = env["QUERY_STRING"].match(/[_OpID=](\d)+-(\d)+/)
 
-          path_to_be_prepended.insert(0, '/') unless path_to_be_prepended.start_with?('/') || env["PATH_INFO"].start_with?('/')
+          puts path_to_be_prepended
+          puts env["PATH_INFO"]
+          path_to_be_prepended.insert(0, '/') unless path_to_be_prepended.start_with?('/') && env["PATH_INFO"].start_with?('/')
 
           env["PATH_INFO"] =  env["PATH_INFO"] << path_to_be_prepended
           env["REQUEST_PATH"] = env["PATH_INFO"].clone

@@ -31,7 +31,7 @@ module OptimusPrime
         return 404
       end
 
-      return response[:status_code] if response[:status_code].to_s =~ /500|404/
+      return response[:status_code].to_i if response[:status_code].to_s =~ /500|404/
 
       body = parse_request(response[:content_type])
 
@@ -59,7 +59,7 @@ module OptimusPrime
         return 404
       end
 
-      return response[:status_code] if response[:status_code].to_s =~ /500|404/
+      return response[:status_code].to_i if response[:status_code].to_s =~ /500|404/
 
       body = parse_request(response[:content_type])
 
@@ -89,7 +89,7 @@ module OptimusPrime
 
       body = parse_request(response[:content_type])
 
-      return response[:status_code] if response[:status_code].to_s =~ /500|404/
+      return response[:status_code].to_i if response[:status_code].to_s =~ /500|404/
 
       if response[:requested_with]
         return 404 unless body.include?(response[:requested_with])
@@ -116,7 +116,7 @@ module OptimusPrime
         return 404
       end
 
-      return response[:status_code] if response[:status_code].to_s =~ /500|404/
+      return response[:status_code].to_i if response[:status_code].to_s =~ /500|404/
 
       record_request(path, {})
 
@@ -136,7 +136,7 @@ module OptimusPrime
       body = params["response"]
       body = body.is_a?(String) ? body : body.to_json
 
-      responses[path] = { content_type: (params["content_type"] || :html), body: body, status_code: (params["status_code"] || 200), requested_with: (params["requested_with"] || false), sleep: (params["sleep"] || false), persisted: (params["persisted"] || false) }
+      responses[path] = { content_type: (params["content_type"] || :html), body: body, status_code: (params["status_code"].to_i || 200), requested_with: (params["requested_with"] || false), sleep: (params["sleep"] || false), persisted: (params["persisted"] || false) }
       requests[path] = { count: 0, last_request: nil }
       201
     end

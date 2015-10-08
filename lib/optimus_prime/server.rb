@@ -136,7 +136,8 @@ module OptimusPrime
       body = params["response"]
       body = body.is_a?(String) ? body : body.to_json
 
-      responses[path] = { content_type: (params["content_type"] || :html), body: body, status_code: (params["status_code"].to_i || 200), requested_with: (params["requested_with"] || false), sleep: (params["sleep"] || false), persisted: (params["persisted"] || false) }
+      status_code = params["status_code"].to_i == 0 ? 200 : params["status_code"]
+      responses[path] = { content_type: (params["content_type"] || :html), body: body, status_code: status_code, requested_with: (params["requested_with"] || false), sleep: (params["sleep"] || false), persisted: (params["persisted"] || false) }
       requests[path] = { count: 0, last_request: nil }
       201
     end

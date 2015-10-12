@@ -154,9 +154,9 @@ module OptimusPrime
     post "/add" do
       body = params[:body]
       path = params[:path]
-      status = params[:status] || 200
+      status_code = params["status_code"].to_i == 0 ? 200 : params["status_code"]
       content_type = params[:content_type]
-      responses[path] = { content_type: (content_type || :html), body: body, status_code: status, requested_with: false, sleep: false, persisted: false }
+      responses[path] = { content_type: (content_type || :html), body: body, status_code: status_code, requested_with: false, sleep: false, persisted: false }
       requests[path] = { count: 0, last_request: nil }
       <<-HTML
         <h1>Done!</h1>
